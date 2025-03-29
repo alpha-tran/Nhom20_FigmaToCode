@@ -1,0 +1,735 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Global focus styles for accessibility */
+:focus {
+  outline: 2px solid #8000f7;
+  outline-offset: 2px;
+}
+
+/* Add smooth scrolling for the whole page */
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+/* Header styles */
+.main-header {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-color: rgba(0, 0, 0, 0.5);
+  border-bottom-width: 1px;
+  display: flex;
+  width: 100%;
+  padding: 17px 75px 17px 37px;
+  align-items: stretch;
+  gap: 20px;
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 17px;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  z-index: 30; /* Ensure header stays above sidebar */
+}
+
+.logo-container {
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  align-items: stretch;
+  gap: 27px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 700;
+}
+
+.logo {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 51px;
+  border-radius: 50px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.brand-name {
+  margin-top: auto;
+  margin-bottom: auto;
+  flex-basis: auto;
+  font-size: 17px;
+}
+
+.header-controls {
+  display: flex;
+  align-items: stretch;
+  gap: 40px 52px;
+  font-weight: 400;
+  flex-wrap: wrap;
+}
+
+.search-bar {
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 1);
+  border-color: rgba(207, 207, 207, 1);
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 12px 15px;
+  align-items: stretch;
+  gap: 17px;
+  color: rgba(140, 140, 140, 1);
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+.search-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 30px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.search-input {
+  flex-basis: auto;
+  flex-grow: 1;
+  flex-shrink: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: rgba(140, 140, 140, 1);
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.user-controls {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #000000;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+.my-courses-btn {
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(0, 0, 0, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  align-self: stretch;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 11px 15px;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.my-courses-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+.my-courses-btn:active {
+  transform: translateY(1px);
+}
+
+.my-courses-btn:focus {
+  outline: 2px solid rgba(0, 0, 0, 0.3);
+  outline-offset: 2px;
+}
+
+.notification-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 40px;
+  align-self: stretch;
+  margin-top: auto;
+  margin-bottom: auto;
+  flex-shrink: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.user-avatar {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 60px;
+  border-radius: 50px;
+  align-self: stretch;
+  flex-shrink: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Sidebar navigation */
+.sidebar-nav {
+  position: fixed;
+  left: 0;
+  top: 96px;
+  width: 105px;
+  height: calc(100vh - 96px);
+  padding: 14px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fff;
+  z-index: 10;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+  overflow-y: auto;
+  bottom: auto; /* Don't extend to bottom of viewport */
+}
+
+/* Scrollbar styling for sidebar */
+.sidebar-nav::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-nav::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 11px 0;
+  gap: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+}
+
+.nav-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+.nav-item:active {
+  transform: translateY(1px);
+}
+
+.nav-item:focus {
+  outline: 2px solid rgba(0, 0, 0, 0.3);
+  outline-offset: 2px;
+}
+
+.nav-item i {
+  font-size: 20px;
+}
+
+.nav-item span {
+  font-size: 12px;
+}
+
+/* Main content */
+.main-content {
+  margin-left: 0;
+  margin-top: 1px;
+  padding: 20px 20px 20px 125px; /* Add padding to the left to avoid content being under the sidebar */
+  min-height: calc(
+    100vh - 96px - 300px
+  ); /* Ensure content area has minimum height */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Hero section */
+.hero-section {
+  border-radius: 16px;
+  padding: 40px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  background-color: #8000f7;
+}
+
+.hero-content {
+  max-width: 60%;
+}
+
+.hero-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  color: #8000f7;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+  background-color: #f8f8f8;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:focus {
+  outline: 2px solid rgba(128, 0, 247, 0.4);
+  outline-offset: 2px;
+}
+
+.react-logo {
+  width: 120px;
+}
+
+/* Section titles */
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 30px 0;
+}
+
+/* Course grid */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));
+  gap: 20px;
+}
+
+/* Course cards */
+.course-card {
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: #e4e4e4;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.course-card:active {
+  transform: translateY(-2px);
+}
+
+.course-image-container {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.course-header {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.js-header {
+  background-color: #000;
+}
+
+.sass-header {
+  background-color: #bf0000;
+}
+
+.foundation-header {
+  background-color: #8000f7;
+}
+
+.c-header {
+  background-color: #24baff;
+}
+
+.js-basic-header {
+  background-color: #bf0000;
+}
+
+.responsive-header {
+  background-color: #2d2bd3;
+}
+
+.course-header-title {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.course-header-subtitle {
+  font-size: 16px;
+}
+
+.course-title {
+  padding: 15px;
+  font-size: 20px;
+}
+
+.course-subtitle {
+  padding: 0 15px 15px;
+}
+
+.course-price {
+  padding: 0 15px;
+  display: flex;
+  gap: 20px;
+}
+
+.original-price {
+  text-decoration: line-through;
+}
+
+.discounted-price {
+  color: #f34500;
+}
+
+.free-price {
+  color: #fc7500;
+  padding: 0 15px;
+  font-size: 20px;
+}
+
+.course-stats {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stat-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Blog section */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(387px, 1fr));
+  gap: 20px;
+}
+
+.blog-card {
+  border-radius: 30px;
+  overflow: hidden;
+  height: 300px;
+  position: relative;
+  background-color: #e7e7e7;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card:active {
+  transform: translateY(-2px);
+}
+
+.blog-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-image-container {
+  background-color: #6fff1b;
+}
+
+.blog-title {
+  padding: 15px;
+  font-size: 24px;
+}
+
+.read-time {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 24px;
+}
+
+/* Footer */
+.site-footer {
+  display: flex;
+  width: 100%;
+  padding: 8px 20px 8px 125px; /* Adjust left padding to match content area */
+  align-items: flex-start;
+  gap: 28px;
+  flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 1);
+  color: #fff;
+  margin-top: 44px;
+  position: relative;
+  z-index: 20; /* Ensure footer stays above sidebar */
+  box-sizing: border-box;
+}
+
+.footer-main {
+  display: flex;
+  width: 440px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-company {
+  width: 100%;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 31px;
+}
+
+.company-logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 50px;
+}
+
+.company-name {
+  font-size: 20px;
+  color: #fff;
+}
+
+.footer-contact {
+  margin-bottom: 22px;
+}
+
+.contact-item {
+  font-size: 15px;
+  margin-bottom: 22px;
+}
+
+.contact-link {
+  text-decoration-line: underline;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.contact-link:hover {
+  color: #ccc;
+}
+
+.contact-link:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+}
+
+.dmca-badge {
+  width: 120px;
+  height: 21px;
+  border: 1px solid #fff;
+  margin-bottom: 49px;
+}
+
+.copyright {
+  font-size: 15px;
+  color: #fff;
+}
+
+.footer-links {
+  display: flex;
+  gap: 74px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.footer-heading {
+  font-size: 24px;
+  margin-bottom: 21px;
+  color: #fff;
+}
+
+.footer-link {
+  font-size: 15px;
+  color: #fff;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.footer-link:hover {
+  color: #ccc;
+  transform: translateX(5px);
+}
+
+.footer-link:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+}
+
+.footer-text {
+  font-size: 15px;
+}
+
+.footer-column:last-child {
+  max-width: 375px;
+}
+
+/* Media queries */
+@media (max-width: 991px) {
+  .main-header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .header-controls {
+    max-width: 100%;
+  }
+
+  .search-bar {
+    max-width: 100%;
+  }
+
+  .search-input {
+    max-width: 100%;
+  }
+
+  .course-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  .blog-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  .footer-main {
+    width: 100%;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+  }
+
+  .site-footer {
+    padding: 8px 40px 8px 125px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sidebar-nav {
+    width: 60px;
+    height: calc(100vh - 96px);
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding-left: 80px; /* Adjust left padding for smaller sidebar */
+  }
+
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    width: 280px;
+    height: 380px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-card {
+    height: auto;
+  }
+
+  .read-time {
+    position: static;
+    padding: 15px;
+  }
+
+  .site-footer {
+    padding: 8px 20px 8px 80px;
+  }
+
+  .footer-links {
+    gap: 40px;
+  }
+}
+
+/* Add a media query for shorter screens */
+@media (max-height: 600px) {
+  .sidebar-nav {
+    height: 70vh; /* Shorter height on small screens */
+  }
+}
