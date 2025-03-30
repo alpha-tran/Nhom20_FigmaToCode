@@ -1,0 +1,37 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #fff;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+/* Content layout */
+.content-wrapper {
+  display: flex;
+  flex: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+  .course-preview {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .course-preview {
+    display: none;
+  }
+}
