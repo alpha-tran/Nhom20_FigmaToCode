@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="login-page">
+    <section class="login-modal">
+      <a href="/DangNhap/index.html">
+        <button class="close-button" aria-label="Close login modal" onclick="toggleLoginModal()">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="close-icon">
+            <circle cx="14" cy="14" r="14" fill="#EAEAEA"></circle>
+            <text transform="translate(18) rotate(47.1776)" fill="#747171" xml:space="preserve" style="white-space: pre"
+              font-family="Inter" font-size="17" letter-spacing="0em">
+              <tspan x="1.39697" y="16.6818">+</tspan>
+            </text>
+          </svg>
+        </button>
+      </a>
+      <div class="login-content">
+        <header class="login-header">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/abff0f9c4d45cd6d91a2046a8fc9c17fe61c95f2"
+            alt="f11 logo" class="logo" />
+          <h1 class="login-title">Đăng ký vào f11</h1>
+          <p class="login-warning">
+            Mỗi người nên sử dụng riêng một tài khoản, tài khoản dùng nhiều người sẽ bị khóa
+          </p>
+        </header>
+
+        <nav class="login-options">
+          <button class="login-button email-login" onclick="showEmailLoginForm()">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3c34e4073e067ad2e8e1e2567989d6a90d279371"
+              alt="user icon" class="button-icon" />
+            <span class="button-text">Sử dụng email/số điện thoại</span>
+          </button>
+
+          <button class="login-button google-login">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5ec2a51ef3cf544bd2acd71a42a1aec168c63028"
+              alt="google icon" class="button-icon" />
+            <span class="button-text">Đăng ký nhập với Google</span>
+          </button>
+
+          <button class="login-button facebook-login">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/50a26f33483dfa52bfd2b3e1065037892889b774"
+              alt="facebook icon" class="button-icon" />
+            <span class="button-text">Đăng ký với Facebook</span>
+          </button>
+
+          <button class="login-button github-login">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d9dc1f442b445a90da1db217e5e41bd09c1a8dcd"
+              alt="github icon" class="button-icon" />
+            <span class="button-text">Đăng ký với Github</span>
+          </button>
+        </nav>
+
+        <!-- Email Login Form -->
+        <div id="emailLoginForm" class="email-login-form hidden">
+          <form>
+            <div class="form-group">
+              <label for="email">Tên của bạn</label>
+              <input type="text" id="email" placeholder="Nhập tên của bạn" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email của bạn</label>
+              <input type="text" id="email" placeholder="Email hoặc Username" />
+            </div>
+            <div class="form-group">
+              <label for="password">Mật khẩu</label>
+              <input type="password" id="password" placeholder="Mật khẩu" />
+            </div>
+            <div class="form-group">
+              <input type="checkbox" id="remember" />
+              <label for="remember">Ghi nhớ đăng nhập</label>
+            </div>
+            <button type="submit" class="submit-button">Đăng ký</button>
+          </form>
+        </div>
+
+        <footer class="login-footer">
+          <div class="account-actions">
+            <p class="signup-prompt">
+              Bạn đã có tài khoản?
+              <a href="/login/login-modal.html" class="signup-link">Đăng nhập</a>
+            </p>
+            <a href="#" class="forgot-password">Quên mật khẩu?</a>
+          </div>
+
+          <p class="terms-text">
+            Việc bạn tiếp tục sử dụng trang web này đồng nghĩa bạn đồng ý với
+            <a href="#" class="terms-link">điều khoản sử dụng</a>
+            của chúng tôi.
+          </p>
+        </footer>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
