@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lộ trình học Front-end</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.30.0/tabler-icons.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Include Header -->
+    <div id="header-container"></div>
+
+    <div class="main-container">
+      <!-- Include Navigation -->
+      <div id="navigation-container"></div>
+
+      <!-- Include Main Content -->
+      <div id="content-container"></div>
+    </div>
+
+    <script>
+      // Function to load HTML components
+      async function loadComponent(url, containerId) {
+        try {
+          const response = await fetch(url);
+          const html = await response.text();
+          document.getElementById(containerId).innerHTML = html;
+        } catch (error) {
+          console.error(`Error loading ${url}:`, error);
+        }
+      }
+
+      // Load all components when the page loads
+      window.addEventListener("DOMContentLoaded", () => {
+        loadComponent("header.html", "header-container");
+        loadComponent("navigation.html", "navigation-container");
+        loadComponent("content.html", "content-container");
+      });
+    </script>
+  </body>
+</html>
