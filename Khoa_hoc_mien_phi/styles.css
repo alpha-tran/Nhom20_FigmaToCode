@@ -35,3 +35,31 @@ body {
     display: none;
   }
 }
+/* content.css */
+.module-lessons {
+  display: none;
+}
+
+.module-header[aria-expanded="true"] + .module-lessons {
+  display: block;
+}
+
+.active-lesson {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  color: #0066cc;
+}
+
+.nav-item.active {
+  background-color: #e6f2ff;
+}
+
+/* Thêm hiệu ứng hover cho các nút có thể click */
+.module-header, .lesson-title, .nav-item {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.module-header:hover, .lesson-title:hover, .nav-item:hover {
+  background-color: #f5f5f5;
+}
