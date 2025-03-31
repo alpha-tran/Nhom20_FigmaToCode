@@ -1,0 +1,128 @@
+/* Main content area */
+.main-content {
+  flex: 1;
+  padding: 32px 48px;
+}
+
+.section-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.learning-outcome {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.course-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 26px;
+}
+
+.course-description {
+  font-size: 20px;
+  margin-bottom: 38px;
+}
+
+.course-stats {
+  font-size: 20px;
+  margin-bottom: 35px;
+}
+
+/* Course modules */
+.course-modules {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.module-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e5e2e2;
+  border-radius: 10px;
+  padding: 14px 24px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border: none;
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+
+.module-header:hover {
+  background-color: #d9d7d7;
+}
+
+.module-header:active {
+  background-color: #cecece;
+}
+
+/* Add dropdown indicator */
+.module-header::after {
+  content: "▼";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.module-header.expanded::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.module-title,
+.lesson-count {
+  font-size: 20px;
+}
+
+.module-lessons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-left: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.lesson-title {
+  font-size: 20px;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.lesson-title:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.lesson-title:active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Course preview */
+.course-preview {
+  width: 538px;
+}
+
+.preview-image {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive content styles */
+@media (max-width: 640px) {
+  .main-content {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

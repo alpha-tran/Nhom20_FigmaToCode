@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Platform</title>
+    <!-- Base styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Component-specific styles -->
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="navigation.css" />
+    <link rel="stylesheet" href="content.css" />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Header Section -->
+      <header class="main-header">
+        <a href="#" class="logo-link">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/483a437f1180fb78d9a659bfa8651d3dbb5ca70e"
+            alt="F11 Logo"
+            class="logo"
+          />
+        </a>
+        <h1 class="site-title">Học lập trình</h1>
+        <div class="search-container">
+          <div class="search-box">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/6b37fceada08f3473bc9c722bb42b1ab5cc121b3"
+              alt="Search"
+              class="search-icon"
+            />
+            <input
+              type="text"
+              placeholder="Tìm kiếm khóa học, bài viết, video....."
+              class="search-input"
+            />
+          </div>
+        </div>
+        <div class="user-actions">
+          <button type="button" class="my-courses-btn">Khóa học của tôi</button>
+          <button type="button" class="icon-button" aria-label="Notifications">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/22c000a9d45e0cab01f2cd4995e44e6cb01e2b14"
+              alt="Notifications"
+              class="notifications-icon"
+            />
+          </button>
+          <button type="button" class="icon-button" aria-label="Profile">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/d5ba5065ed90f8e2042e5cd0498036c5fc3a0de9"
+              alt="Profile"
+              class="profile-image"
+            />
+          </button>
+        </div>
+      </header>
+
+      <div class="content-wrapper">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar-nav">
+          <button type="button" class="nav-item active" id="trangchutrangchu">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/6ed705f448d6a3d683a0995bc09bd149e7c0bca4"
+              alt="Home"
+              class="nav-icon"
+            />
+            <span class="nav-label">Trang Chủ</span>
+          </button>
+          <button type="button" class="nav-item" id="roadmap-btn">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/9c90ce5ec596e47482bb44b7665cca217380b3aa"
+              alt="Road"
+              class="nav-icon"
+            />
+            <span class="nav-label">Lộ Trình</span>
+          </button>
+          <button type="button" class="nav-item">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/f881d75ca8f7b2253feb65d67a6ffe23524c573c"
+              alt="News"
+              class="nav-icon"
+            />
+            <span class="nav-label">Bài Viết</span>
+          </button>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+          <section class="course-info">
+            <h2 class="section-title">Bạn sẽ học được gì ?</h2>
+            <p class="learning-outcome">
+              Biết cách tự tạo động lực cho bản thân
+            </p>
+            <h3 class="course-title">HTML CSS từ Zero đến Hero</h3>
+            <p class="learning-outcome">
+              Làm chủ Flexbox khi dựng bố cục website
+            </p>
+            <p class="learning-outcome">
+              Biết cách đặt tên class CSS theo chuẩn BEM
+            </p>
+            <p class="learning-outcome">
+              Biết cách xây dựng giao diện web với HTML CSS
+            </p>
+            <p class="course-description">
+              Trong khóa này chúng ta sẽ cùng nhau xây dựng giao diện 2 trang
+              web là the Band &amp; Shoppe
+            </p>
+
+            <h2 class="section-title">Nội dung khóa học</h2>
+            <p class="course-stats">
+              4 chương - 12 bài học - thời lượng 03 giờ 26 phút
+            </p>
+
+            <div class="course-modules">
+              <button
+                type="button"
+                class="module-header expanded"
+                aria-expanded="true"
+                aria-controls="module-1-lessons"
+              >
+                <h3 class="module-title">1. Khái niệm kỹ thuật cần thiết</h3>
+                <span class="lesson-count">3 bài học</span>
+              </button>
+              <div id="module-1-lessons" class="module-lessons">
+                <button type="button" class="lesson-title">
+                  Mô hình Client - server là gì ?
+                </button>
+                <button type="button" class="lesson-title">
+                  Domain là gì ? Tên miền là gì ?
+                </button>
+                <button type="button" class="lesson-title">
+                  Mua áo F8 | Đăng ký học Offline
+                </button>
+              </div>
+
+              <button
+                type="button"
+                class="module-header"
+                aria-expanded="false"
+                aria-controls="module-2-lessons"
+              >
+                <h3 class="module-title">2. Môi trường , con người IT</h3>
+                <span class="lesson-count">3 bài học</span>
+              </button>
+              <div id="module-2-lessons" class="module-lessons">
+                <button type="button" class="lesson-title">
+                  Học IT cần tố chất gì?
+                </button>
+                <button type="button" class="lesson-title">
+                  Làm việc với môi trường IT
+                </button>
+                <button type="button" class="lesson-title">
+                  Các công cụ cần thiết
+                </button>
+              </div>
+
+              <button
+                type="button"
+                class="module-header"
+                aria-expanded="false"
+                aria-controls="module-3-lessons"
+              >
+                <h3 class="module-title">3. Phương pháp , định hướng</h3>
+                <span class="lesson-count">3 bài học</span>
+              </button>
+              <div id="module-3-lessons" class="module-lessons">
+                <button type="button" class="lesson-title">
+                  Phương pháp học lập trình
+                </button>
+                <button type="button" class="lesson-title">
+                  Định hướng nghề nghiệp
+                </button>
+                <button type="button" class="lesson-title">
+                  Lộ trình học tập
+                </button>
+              </div>
+
+              <button
+                type="button"
+                class="module-header"
+                aria-expanded="false"
+                aria-controls="module-4-lessons"
+              >
+                <h3 class="module-title">4. Hoàn thành khóa học</h3>
+                <span class="lesson-count">3 bài học</span>
+              </button>
+              <div id="module-4-lessons" class="module-lessons">
+                <button type="button" class="lesson-title">
+                  Tổng kết khóa học
+                </button>
+                <button type="button" class="lesson-title">
+                  Nhận chứng chỉ
+                </button>
+                <button type="button" class="lesson-title">
+                  Các khóa học tiếp theo
+                </button>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <!-- Course Preview Sidebar -->
+        <aside class="course-preview">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/165d26bfbbc3e55a228fdb9bc1aa0cf4888053d4"
+            alt="Course Preview"
+            class="preview-image"
+          />
+        </aside>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
