@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const roadmapBtn = document.getElementById('roadmap-btn');
   
   // Thêm sự kiện click
-  if (roadmapBtn) {
-    roadmapBtn.addEventListener('click', function() {
+  if (home-nav) {
+    home-nav.addEventListener('click', function() {
       // Chuyển hướng sang trang lộ trình
       window.location.href = '../Lo_trinh/index.html'; 
       
@@ -35,34 +35,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
-function initializeNavComponents() {
-  // Navigation items functionality
-  const navItems = document.querySelectorAll(".nav-item");
-  
-  navItems.forEach((item) => {
-    item.addEventListener("click", function () {
-      const navLabel = this.querySelector(".nav-label").textContent;
-      
-      // Xóa class active khỏi tất cả các item
-      navItems.forEach(navItem => navItem.classList.remove('active'));
-      
-      // Thêm class active vào item được click
-      this.classList.add('active');
-      
-      // Xử lý chuyển trang theo từng mục
-      switch(navLabel) {
-        case 'Trang Chủ':
-          window.location.href = '../Khoa_hoc_mien_phi/index.html';
-          break;
-        case 'Lộ Trình':
-          window.location.href = '../Lo_trinh/index.html';
-          break;
-        case 'Bài Viết':
-          window.location.href = '../Bai_viet/index.html';
-          break;
-        default:
-          console.log(`Navigating to: ${navLabel}`);
-      }
-    });
-  });
-}
