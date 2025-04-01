@@ -212,3 +212,23 @@ document.addEventListener("click", function (event) {
     profileCard.classList.remove("show");
   }
 });
+function logout() {
+  localStorage.removeItem('loggedInUser');
+  console.log('Đăng xuất thành công!');
+  alert('Đăng xuất thành công!');
+  window.location.href = '/Dangnhap/index.html'; // Chuyển hướng về trang đăng nhập sau khi đăng xuất
+}
+
+// Kiểm tra trạng thái đăng nhập và ẩn nút nếu chưa đăng nhập
+document.addEventListener('DOMContentLoaded', function () {
+  const logoutButton = document.querySelector('li a[href="#"]');
+  if (logoutButton) {
+    if (!isLoggedIn()) {
+      logoutButton.style.display = 'none'; // Ẩn nút nếu chưa đăng nhập
+    }
+  }
+});
+
+function isLoggedIn() {
+  return localStorage.getItem('loggedInUser') !== null;
+}
