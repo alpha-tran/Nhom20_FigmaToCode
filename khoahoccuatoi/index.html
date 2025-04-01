@@ -12,23 +12,6 @@
 
 <body>
   <div class="course-platform">
-    <nav class="side-nav">
-      <div class="nav-item">
-        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/760a5f56d6147d8ff36537db02c7f47a3da5bc58" alt="Home"
-          class="nav-icon" />
-        <span class="nav-text">Trang Chủ</span>
-      </div>
-      <div class="nav-item">
-        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2a5b7831a5c55e251c29b15b724f1f1a71f0f817"
-          alt="Roadmap" class="nav-icon" />
-        <span class="nav-text">Lộ Trình</span>
-      </div>
-      <div class="nav-item">
-        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0868f1aabfe7e369f0e7a2375431dfdca42bd82d" alt="Posts"
-          class="nav-icon" />
-        <span class="nav-text">Bài Viết</span>
-      </div>
-    </nav>
     <header class="main-header">
       <div class="logo-section">
         <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0f9b8f05e71a1e40441ed262794c37cbb7be4ca8"
@@ -109,32 +92,30 @@
             <li><a href="#">Bài viết đã lưu</a></li>
             <hr>
             <li><a href="#">Cài đặt</a></li>
-            <li><a href="#">Đăng xuất</a></li>
+            <li><a href="#" onclick="logout()">Đăng xuất</a></li>
           </ul>
         </div>
       </div>
     </header>
 
     <div class="content-wrapper">
-      <nav class="side-navigation">
-        <div class="nav-container">
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/4022b72709a1ae8ce3ccbf2138dba72195b9911a?placeholderIfAbsent=true&apiKey=46d9f9ab05cd4e19b79c591b4f4682e8"
-            alt="Home icon" class="nav-icon" />
-          <a href="#" class="nav-link">Trang Chủ</a>
-
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/35c11162f3435786bf06cefacd2cdbdc84023d13?placeholderIfAbsent=true&apiKey=46d9f9ab05cd4e19b79c591b4f4682e8"
-            alt="Route icon" class="nav-icon" />
-          <a href="#" class="nav-link">Lộ Trình</a>
-
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/c5640386da3048ea49ca994835c3e66f4894709d?placeholderIfAbsent=true&apiKey=46d9f9ab05cd4e19b79c591b4f4682e8"
-            alt="Articles icon" class="nav-icon" />
-          <a href="/BaiVietNoiBat/index.html" class="nav-link">Bài Viết</a>
-        </div>
+      <nav class="main-nav">
+        <a href="#" class="nav-item active">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/760a5f56d6147d8ff36537db02c7f47a3da5bc58" alt="Home"
+            class="nav-icon" />
+          <span class="nav-text">Trang Chủ</span>
+        </a>
+        <a href="#" class="nav-item">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2a5b7831a5c55e251c29b15b724f1f1a71f0f817"
+            alt="Roadmap" class="nav-icon" />
+          <span class="nav-text">Lộ Trình</span>
+        </a>
+        <a href="/BaiVietNoiBat/index.html" class="nav-item">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0868f1aabfe7e369f0e7a2375431dfdca42bd82d"
+            alt="Posts" class="nav-icon" />
+          <span class="nav-text">Bài Viết</span>
+        </a>
       </nav>
-
       <main class="main-content">
         <h1 class="page-title">Khóa học của tôi</h1>
 

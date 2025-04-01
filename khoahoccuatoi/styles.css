@@ -621,3 +621,9 @@ hr {
     gap: 40px;
   }
 }
+
+.main-nav {
+
+  padding: 60px 10px 20px 0;
+  background-color: #fff;
+}

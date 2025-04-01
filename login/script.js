@@ -34,7 +34,7 @@ function logout() {
     localStorage.removeItem('loggedInUser');
     console.log('Đăng xuất thành công!');
     alert('Đăng xuất thành công!');
-    window.location.href = 'login.html'; // Chuyển hướng về trang đăng nhập sau khi đăng xuất
+    window.location.href = '/Dangnhap/index.html'; // Chuyển hướng về trang đăng nhập sau khi đăng xuất
 }
 
 // Kiểm tra trạng thái đăng nhập
