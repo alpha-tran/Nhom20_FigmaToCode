@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learning Platform</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="app-container">
+    <header class="main-header">
+      <div class="logo-section">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0f9b8f05e71a1e40441ed262794c37cbb7be4ca8"
+          alt="F11 Logo" class="logo" />
+        <h1 class="header-title">Học lập trình</h1>
+      </div>
+
+      <div class="search-section">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2896ef2e05ab4efbc2a64f0dd0fa62f18dc1e642" alt="Search"
+          class="search-icon" />
+        <input type="text" placeholder="Tìm kiếm khóa học, bài viết, video....." class="search-input" />
+      </div>
+
+      <div class="user-section">
+        <button class="my-courses-btn" onclick="toggleCourses()">Khóa học của tôi</button>
+
+        <div id="courseContainer" class="course-container">
+          <div class="header">
+            <h2>Khóa học của tôi</h2>
+            <a href="/khoahoccuatoi/index.html" class="view-all">Xem tất cả</a>
+          </div>
+          <div class="course-list">
+            <article class="student-card">
+              <div class="course-item">
+                <img src="./auth/6.png" alt="Node & ExpressJS">
+                <div class="course-info">
+                  <h3>Node & ExpressJS</h3>
+                  <p>Học cách đây 1 tuần trước</p>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 50%;"></div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="student-card">
+              <div class="course-item">
+                <img src="./auth/2.png" alt="HTML CSS từ zero đến hero">
+                <div class="course-info">
+                  <h3>HTML CSS từ zero đến hero</h3>
+                  <p>Học cách đây 2 tuần trước</p>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 75%;"></div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="student-card">
+              <div class="course-item">
+                <img src="./auth/12.png" alt="Lập trình JavaScript Cơ bản">
+                <div class="course-info">
+                  <h3>Lập trình JavaScript Cơ bản</h3>
+                  <p>Học cách đây 3 tuần trước</p>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 30%;"></div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b9f029b36dcb0fccafa43c47a621308e037af7ee"
+          alt="Notifications" class="notifications-icon" />
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/32b5113305a5ad0fbfd9a4429511c612789dd759"
+          alt="Profile" class="profile-img" onclick="profile()" />
+        <div class="profile-card">
+          <div class="profile-header">
+            <img src="./auth/avatar.webp" alt="Avatar" class="avatar">
+            <div class="profile-info">
+              <h2>Nguyễn Linh Chú</h2>
+              <p>@11999QLING</p>
+            </div>
+          </div>
+          <ul class="menu">
+            <li><a href="#">Trang cá nhân</a></li>
+            <li><a href="#">Viết blog</a></li>
+            <li><a href="/baivietcuatoi/index.html">Bài viết của tôi</a></li>
+            <li><a href="#">Bài viết đã lưu</a></li>
+            <hr>
+            <li><a href="#">Cài đặt</a></li>
+            <li><a href="#" onclick="logout()">Đăng xuất</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div class="content-wrapper">
+      <nav class="main-nav">
+        <a href="#" class="nav-item active">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/760a5f56d6147d8ff36537db02c7f47a3da5bc58" alt="Home"
+            class="nav-icon" />
+          <span class="nav-text">Trang Chủ</span>
+        </a>
+        <a href="#" class="nav-item">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2a5b7831a5c55e251c29b15b724f1f1a71f0f817"
+            alt="Roadmap" class="nav-icon" />
+          <span class="nav-text">Lộ Trình</span>
+        </a>
+        <a href="/BaiVietNoiBat/index.html" class="nav-item">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0868f1aabfe7e369f0e7a2375431dfdca42bd82d"
+            alt="Posts" class="nav-icon" />
+          <span class="nav-text">Bài Viết</span>
+        </a>
+      </nav>
+
+      <main class="main-content">
+        <section class="my-posts-section">
+          <h2 class="section-title">Bài viết của tôi</h2>
+          <button class="add-post-btn">
+            <svg width="176" height="40" viewBox="0 0 176 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="19" cy="21" r="19" fill="#3AF81D" />
+              <text fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="32"
+                font-weight="bold" letter-spacing="0em">
+                <tspan x="8.125" y="31.1364">+</tspan>
+              </text>
+              <text fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="20"
+                font-weight="bold" letter-spacing="0em">
+                <tspan x="44.0234" y="27.2727">Thêm bài viết</tspan>
+              </text>
+            </svg>
+            <span>Thêm bài viết</span>
+          </button>
+          <hr class="section-divider" />
+        </section>
+
+        <section class="posts-list">
+          <article class="post-card">
+            <div class="post-author">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2c475966794c1ad35279d2d2c9a19777cfee5077"
+                alt="Author" class="author-avatar" />
+              <span class="author-name">Nguyễn Linh Chú</span>
+            </div>
+            <h3 class="post-title">
+              Góc chia sẻ: Nữ giới có nên lựa chọn theo nghề IT không?
+            </h3>
+            <p class="post-excerpt">
+              Python được tạo ra bởi Guido van Rossum, một lập trình viên
+              người Hà Lan. Ông bắt đầu phát triển Python vào cuối những năm
+              1980...
+            </p>
+            <div class="post-meta">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f0a1e3841f2d2bfccb3d2dc8c1033e4a25efa68d"
+                alt="Clock" class="time-icon" />
+              <span class="post-time">4 ngày trước</span>
+            </div>
+          </article>
+
+          <article class="post-card">
+            <div class="post-author">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2c475966794c1ad35279d2d2c9a19777cfee5077"
+                alt="Author" class="author-avatar" />
+              <span class="author-name">Nguyễn Linh Chú</span>
+            </div>
+            <h3 class="post-title">
+              Góc chia sẻ: Nữ giới có nên lựa chọn theo nghề IT không?
+            </h3>
+            <p class="post-excerpt">
+              Python được tạo ra bởi Guido van Rossum, một lập trình viên
+              người Hà Lan. Ông bắt đầu phát triển Python vào cuối những năm
+              1980...
+            </p>
+            <div class="post-meta">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f0a1e3841f2d2bfccb3d2dc8c1033e4a25efa68d"
+                alt="Clock" class="time-icon" />
+              <span class="post-time">4 ngày trước</span>
+            </div>
+          </article>
+
+          <article class="post-card">
+            <div class="post-author">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2c475966794c1ad35279d2d2c9a19777cfee5077"
+                alt="Author" class="author-avatar" />
+              <span class="author-name">Nguyễn Linh Chú</span>
+            </div>
+            <h3 class="post-title">
+              Góc chia sẻ: Nữ giới có nên lựa chọn theo nghề IT không?
+            </h3>
+            <p class="post-excerpt">
+              Python được tạo ra bởi Guido van Rossum, một lập trình viên
+              người Hà Lan. Ông bắt đầu phát triển Python vào cuối những năm
+              1980...
+            </p>
+            <div class="post-meta">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f0a1e3841f2d2bfccb3d2dc8c1033e4a25efa68d"
+                alt="Clock" class="time-icon" />
+              <span class="post-time">4 ngày trước</span>
+            </div>
+          </article>
+
+          <article class="post-card">
+            <div class="post-author">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c3f9b003ed5a00bbb6139add5da3acdf3d9ecf50"
+                alt="Author" class="author-avatar" />
+              <span class="author-name">Nguyễn Linh Chú</span>
+            </div>
+            <h3 class="post-title">
+              Góc chia sẻ: Nữ giới có nên lựa chọn theo nghề IT không?
+            </h3>
+            <p class="post-excerpt">
+              Python được tạo ra bởi Guido van Rossum, một lập trình viên
+              người Hà Lan. Ông bắt đầu phát triển Python vào cuối những năm
+              1980...
+            </p>
+            <div class="post-meta">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ad33659c33381eac40061641b81f19d65a13ad9f"
+                alt="Clock" class="time-icon" />
+              <span class="post-time">4 ngày trước</span>
+            </div>
+          </article>
+
+          <article class="post-card">
+            <div class="post-author">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ad33659c33381eac40061641b81f19d65a13ad9f"
+                alt="Author" class="author-avatar" />
+              <span class="author-name">Nguyễn Linh Chú</span>
+            </div>
+            <h3 class="post-title">
+              Góc chia sẻ: Nữ giới có nên lựa chọn theo nghề IT không?
+            </h3>
+            <p class="post-excerpt">
+              Python được tạo ra bởi Guido van Rossum, một lập trình viên
+              người Hà Lan. Ông bắt đầu phát triển Python vào cuối những năm
+              1980...
+            </p>
+            <div class="post-meta">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ad33659c33381eac40061641b81f19d65a13ad9f"
+                alt="Clock" class="time-icon" />
+              <span class="post-time">4 ngày trước</span>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <aside class="ads-sidebar">
+        <h2 class="ads-title">Quảng cáo</h2>
+        <div class="ads-container">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1aee8f166205e6422d5fc6fdcc5ae1c1a0ee4f02"
+            alt="Advertisement 1" class="ad-image" />
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fa06f39c9934795ec41e2fa0ef75d28b7c3b64d5"
+            alt="Advertisement 2" class="ad-image" />
+        </div>
+      </aside>
+    </div>
+  </div>
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="company-info">
+        <h2 class="footer-title">F11 Học Lập Trình Để Đi Làm</h2>
+        <p class="company-name">CÔNG TY CỔ PHẦN CÔNG NGHỆ GIÁO DỤC F11</p>
+        <div class="contact-info">
+          <p>Điện thoại: 69 6969 6969</p>
+          <p>Email: contact@fullstack.edu.vn</p>
+          <p>Địa chỉ: Số 1, ngõ 41, Trần Duy Hưng, Cầu Giấy, Hà Nội</p>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-section">
+          <h3>VỀ F11</h3>
+          <nav>
+            <a href="#">Giới thiệu</a>
+            <a href="#">Liên hệ</a>
+            <a href="#">Điều khoản</a>
+            <a href="#">Bảo mật</a>
+          </nav>
+        </div>
+
+        <div class="footer-section">
+          <h3>SẢN PHẨM</h3>
+          <nav>
+            <a href="#">Game Nester</a>
+            <a href="#">Game CSS Diner</a>
+            <a href="#">Game CSS Selectors</a>
+            <a href="#">Game Froggy</a>
+            <a href="#">Game Froggy Pro</a>
+            <a href="#">Game Scoops</a>
+          </nav>
+        </div>
+
+        <div class="footer-section">
+          <h3>CÔNG CỤ</h3>
+          <nav>
+            <a href="#">Tạo CV xin việc</a>
+            <a href="#">Rút gọn liên kết</a>
+            <a href="#">Clip-path maker</a>
+            <a href="#">Snippet generator</a>
+            <a href="#">CSS Grid generator</a>
+            <a href="#">Cảnh báo sờ tay lên mặt</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2018 - 2025 F11. Nền tảng học lập trình hàng đầu Việt Nam</p>
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ad33659c33381eac40061641b81f19d65a13ad9f" alt="TikTok"
+        class="social-icon" />
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
