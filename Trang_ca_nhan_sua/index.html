@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page-container">
+      <!-- Header component -->
+      <div id="header-container"></div>
+
+      <!-- Body component -->
+      <div id="body-container"></div>
+    </div>
+
+    <script>
+      // Load header component
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-container").innerHTML = data;
+        });
+
+      // Load body component
+      fetch("body.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("body-container").innerHTML = data;
+        });
+
+      // Function to handle going back
+      function goBack() {
+        console.log("Going back to previous page");
+        // In a real application, you would use:
+        // window.history.back();
+        alert("Quay lại trang trước");
+      }
+
+      // Function to open a course
+      function openCourse(courseId) {
+        console.log("Opening course:", courseId);
+        alert("Mở khóa học: " + courseId);
+        // In a real application, you would redirect to the course page:
+        // window.location.href = `/courses/${courseId}`;
+      }
+
+      // Add event listeners after components are loaded
+      window.addEventListener("load", function () {
+        // Add any additional event listeners here if needed
+        console.log("All components loaded and ready");
+      });
+    </script>
+  </body>
+</html>
