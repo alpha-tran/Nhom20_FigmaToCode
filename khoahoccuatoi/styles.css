@@ -627,3 +627,13 @@ hr {
   padding: 60px 10px 20px 0;
   background-color: #fff;
 }
+
+/* Bỏ gạch chân cho liên kết trong điều hướng chính */
+.main-nav a {
+  text-decoration: none;
+}
+
+/* Bỏ gạch chân cho liên kết trong footer */
+.footer-links a {
+  text-decoration: none;
+}

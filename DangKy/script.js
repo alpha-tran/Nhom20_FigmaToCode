@@ -1,5 +1,5 @@
 function toggleLoginModal() {
-    const modal = document.querySelector('.login-modal');
+    const modal = document.querySelector('..login-modal');
     modal.classList.toggle('hidden');
 }
 

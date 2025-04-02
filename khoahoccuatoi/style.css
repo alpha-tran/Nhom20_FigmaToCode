@@ -98,3 +98,13 @@ img {
     display: block;
     /* Hiện khi có class active */
 }
+
+/* Bỏ gạch chân cho tất cả các liên kết */
+a {
+    text-decoration: none;
+  }
+  
+  /* Đảm bảo khi hover cũng không có gạch chân */
+  a:hover {
+    text-decoration: none;
+  }

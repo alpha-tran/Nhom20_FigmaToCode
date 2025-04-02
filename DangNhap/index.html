@@ -5,75 +5,80 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <div class="app-container">
-    <header class="main-header">
-      <div class="logo-section">
-        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0f9b8f05e71a1e40441ed262794c37cbb7be4ca8"
-          alt="F11 Logo" class="logo" />
-        <h1 class="header-title">Học lập trình</h1>
-      </div>
+  <main class="login-page">
+    <section class="login-modal">
+      <a href="../DangNhap/index.html">
+        <button class="close-button" aria-label="Close login modal" onclick="toggleLoginModal()">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="close-icon">
+            <circle cx="14" cy="14" r="14" fill="#EAEAEA"></circle>
+            <text transform="translate(18) rotate(47.1776)" fill="#747171" xml:space="preserve" style="white-space: pre"
+              font-family="Inter" font-size="17" letter-spacing="0em">
+              <tspan x="1.39697" y="16.6818">+</tspan>
+            </text>
+          </svg>
+        </button>
+      </a>
+      <div class="login-content">
+        <header class="login-header">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/abff0f9c4d45cd6d91a2046a8fc9c17fe61c95f2"
+            alt="f11 logo" class="logo" />
+          <h1 class="login-title">Đăng nhập vào f11</h1>
+          <p class="login-warning">
+            Mỗi người nên sử dụng riêng một tài khoản, tài khoản dùng nhiều người sẽ bị khóa
+          </p>
+        </header>
 
-      <div class="search-section">
-        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2896ef2e05ab4efbc2a64f0dd0fa62f18dc1e642" alt="Search"
-          class="search-icon" />
-        <input type="text" placeholder="Tìm kiếm khóa học, bài viết, video....." class="search-input" />
-      </div>
-      <div class="button-group">
-        <a href="/DangKy/sigup-modal.html">
-          <button class="btn btn-register">Đăng ký</button>
-        </a>
-        <a href="/login/login-modal.html">
-          <button class="btn btn-login">Đăng nhập</button>
-        </a>
-      </div>
-      <!-- <div id="loginModal" class="modal">
-        <div class="modal-content">
-          <span class="close-btn" onclick="toggleLoginModal()">&times;</span>
-          <div class="modal-header">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0f9b8f05e71a1e40441ed262794c37cbb7be4ca8"
-              alt="Logo" class="modal-logo">
-            <h2>Đăng nhập vào F11</h2>
-            <p>Mỗi người nên sử dụng riêng một tài khoản, tài khoản dùng nhiều người sẽ bị khóa</p>
-          </div>
-          <div class="modal-body">
-            <button class="login-option">Sử dụng email/số điện thoại</button>
-            <button class="login-option">Đăng nhập với Google</button>
-            <button class="login-option">Đăng nhập với Facebook</button>
-            <button class="login-option">Đăng nhập với Github</button>
-          </div>
-          <div class="modal-footer">
-            <p>Bạn đã có tài khoản? <a href="#">Đăng ký</a></p>
-            <p><a href="#">Quên mật khẩu?</a></p>
-          </div>
-        </div>
-      </div> -->
-    </header>
-    <div class="content-wrapper">
-      <nav class="side-nav">
-        <div class="nav-item">
-          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/760a5f56d6147d8ff36537db02c7f47a3da5bc58" alt="Home"
-            class="nav-icon" />
-          <span class="nav-text">Trang Chủ</span>
-        </div>
-        <div class="nav-item">
-          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2a5b7831a5c55e251c29b15b724f1f1a71f0f817"
-            alt="Roadmap" class="nav-icon" />
-          <span class="nav-text">Lộ Trình</span>
-        </div>
-        <div class="nav-item">
-          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0868f1aabfe7e369f0e7a2375431dfdca42bd82d"
-            alt="Posts" class="nav-icon" />
-          <span class="nav-text">Bài Viết</span>
-        </div>
-      </nav>
+        <nav class="login-options">
+          <button class="login-button email-login" onclick="showEmailLoginForm()">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3c34e4073e067ad2e8e1e2567989d6a90d279371"
+              alt="user icon" class="button-icon" />
+            <span class="button-text">Sử dụng email/số điện thoại</span>
+          </button>
+        </nav>
 
-    </div>
-    <script src="script.js"></script>
-  </div>
+        <!-- Email Login Form -->
+        <div id="emailLoginForm" class="email-login-form hidden">
+          <form>
+            <div class="form-group">
+              <label for="email">Tên đăng nhập</label>
+              <input type="text" id="email" placeholder="Email hoặc Username" />
+            </div>
+            <div class="form-group">
+              <label for="password">Mật khẩu</label>
+              <input type="password" id="password" placeholder="Mật khẩu" />
+            </div>
+            <div class="form-group">
+              <input type="checkbox" id="remember" />
+              <label for="remember">Ghi nhớ đăng nhập</label>
+            </div>
+            <button type="submit" class="submit-button">Đăng nhập</button>
+          </form>
+        </div>
+
+        <footer class="login-footer">
+          <div class="account-actions">
+            <p class="signup-prompt">
+              Bạn chưa có tài khoản?
+              <a href="../DangKy/index.html" class="signup-link">Đăng ký</a>
+            </p>
+          </div>
+
+          <p class="terms-text">
+            Việc bạn tiếp tục sử dụng trang web này đồng nghĩa bạn đồng ý với
+            <a href="#" class="terms-link">điều khoản sử dụng</a>
+            của chúng tôi.
+          </p>
+        </footer>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
 </body>
 
 </html>

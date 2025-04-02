@@ -12,7 +12,7 @@
 <body>
   <main class="login-page">
     <section class="login-modal">
-      <a href="/DangNhap/index.html">
+      <a href="../DangNhap/index.html">
         <button class="close-button" aria-label="Close login modal" onclick="toggleLoginModal()">
           <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
             class="close-icon">
@@ -28,7 +28,7 @@
         <header class="login-header">
           <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/abff0f9c4d45cd6d91a2046a8fc9c17fe61c95f2"
             alt="f11 logo" class="logo" />
-          <h1 class="login-title">Đăng nhập vào f11</h1>
+          <h1 class="login-title">Đăng ký vào f11</h1>
           <p class="login-warning">
             Mỗi người nên sử dụng riêng một tài khoản, tài khoản dùng nhiều người sẽ bị khóa
           </p>
@@ -40,31 +40,17 @@
               alt="user icon" class="button-icon" />
             <span class="button-text">Sử dụng email/số điện thoại</span>
           </button>
-
-          <button class="login-button google-login">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5ec2a51ef3cf544bd2acd71a42a1aec168c63028"
-              alt="google icon" class="button-icon" />
-            <span class="button-text">Đăng nhập với Google</span>
-          </button>
-
-          <button class="login-button facebook-login">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/50a26f33483dfa52bfd2b3e1065037892889b774"
-              alt="facebook icon" class="button-icon" />
-            <span class="button-text">Đăng nhập với Facebook</span>
-          </button>
-
-          <button class="login-button github-login">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d9dc1f442b445a90da1db217e5e41bd09c1a8dcd"
-              alt="github icon" class="button-icon" />
-            <span class="button-text">Đăng nhập với Github</span>
-          </button>
         </nav>
 
         <!-- Email Login Form -->
         <div id="emailLoginForm" class="email-login-form hidden">
-          <form>
+          <form action="../DangNhap/index.html" method="GET">
             <div class="form-group">
-              <label for="email">Tên đăng nhập</label>
+              <label for="email">Tên của bạn</label>
+              <input type="text" id="email" placeholder="Nhập tên của bạn" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email của bạn</label>
               <input type="text" id="email" placeholder="Email hoặc Username" />
             </div>
             <div class="form-group">
@@ -75,17 +61,16 @@
               <input type="checkbox" id="remember" />
               <label for="remember">Ghi nhớ đăng nhập</label>
             </div>
-            <button type="submit" class="submit-button">Đăng nhập</button>
+            <button type="submit" class="submit-button">Đăng ký</button>
           </form>
         </div>
 
         <footer class="login-footer">
           <div class="account-actions">
             <p class="signup-prompt">
-              Bạn chưa có tài khoản?
-              <a href="/DangKy/sigup-modal.html" class="signup-link">Đăng ký</a>
+              Bạn đã có tài khoản?
+              <a href="../DangNhap/index.html" class="signup-link">Đăng nhập</a>
             </p>
-            <a href="#" class="forgot-password">Quên mật khẩu?</a>
           </div>
 
           <p class="terms-text">
