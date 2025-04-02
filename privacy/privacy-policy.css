@@ -330,7 +330,7 @@ body {
 }
 
 .footer-link {
-  text-decoration-line: underline;
+  text-decoration-line: none;
   color: #fff;
   transition: color 0.2s ease;
 }

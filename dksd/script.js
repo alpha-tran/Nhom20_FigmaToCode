@@ -16,3 +16,27 @@ mobileNavItems.forEach((item) => {
     this.style.backgroundColor = "#f5f5f5";
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+  // Handle desktop navigation item clicks
+  const desktopNavItems = document.querySelectorAll(".nav-item");
+
+  desktopNavItems.forEach((item) => {
+    item.addEventListener("click", function (e) {
+      const href = this.getAttribute("href");
+
+      // Only prevent default if href is empty or "#"
+      if (!href || href === "#") {
+        e.preventDefault();
+      } else {
+        // Allow navigation for valid links
+        window.location.href = href;
+      }
+
+      // Add click effect
+      this.style.transform = "scale(0.95)";
+      setTimeout(() => {
+        this.style.transform = "scale(1)";
+      }, 100);
+    });
+  });
+});
