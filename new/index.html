@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Học Lập Trình</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__content">
+      <div class="header__logo-section">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/483a437f1180fb78d9a659bfa8651d3dbb5ca70e"
+          alt="F11 Logo" class="header__logo" />
+        <h1 class="header__title">Học lập trình</h1>
+      </div>
+
+      <div class="header__search">
+        <div class="search-bar">
+          <div class="search-bar__input-wrapper">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6b37fceada08f3473bc9c722bb42b1ab5cc121b3"
+              alt="Search" class="search-bar__icon" />
+            <input type="text" placeholder="Tìm kiếm khóa học, bài viết, video....." class="search-bar__input" />
+          </div>
+        </div>
+      </div>
+
+      <div class="header__user-section">
+        <button class="header__my-courses">Khóa học của tôi</button>
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/22c000a9d45e0cab01f2cd4995e44e6cb01e2b14"
+          alt="Notifications" class="header__notifications" />
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d5ba5065ed90f8e2042e5cd0498036c5fc3a0de9"
+          alt="Profile" class="header__profile" />
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="sidebar">
+      <button class="nav-item nav-item--active" aria-current="page">
+        <div class="nav-item__icon-wrapper">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/735ea8382c5c5cc798ff1297f51ac847cabf4181" alt=""
+            class="nav-item__icon" aria-hidden="true" />
+        </div>
+        <span class="nav-item__label">Trang Chủ</span>
+      </button>
+
+      <div class="nav-item">
+        <div class="nav-item__icon-wrapper">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/23b4f51be0934b1de3117b4828a3d94c85d7db1e" alt="Road"
+            class="nav-item__icon" />
+        </div>
+        <span class="nav-item__label">Lộ Trình</span>
+      </div>
+
+      <div class="nav-item">
+        <div class="nav-item__icon-wrapper">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7dde6c7aeefdde981f6ec5624605977b1e806fe5" alt="News"
+            class="nav-item__icon" />
+        </div>
+        <span class="nav-item__label">Bài Viết</span>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <article class="blog-post">
+        <h1 class="blog-post__title">
+          Cách chỉnh theme Oh-my-posh cho Powershell
+        </h1>
+
+        <div class="blog-post__meta">
+          <div class="author">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4479e13a36e2f0e06daef70a598f1a1a3a7e3770"
+              alt="Author" class="author__image" />
+            <div class="author__info">
+              <h2 class="author__name">DOGE MEME</h2>
+              <div class="author__details">
+                <span>2 năm trước</span>
+                <span>/ 2 phút đọc</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="post-actions">
+            <div class="save-action">
+              <button class="post-actions__bookmark" aria-label="Save post">
+                <svg width="63" height="74" viewBox="0 0 63 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M13.7022 64.75V15.4167C13.7022 13.7208 14.2019 12.2691 15.2014 11.0615C16.2008 9.85382 17.4022 9.25 18.8056 9.25H44.3224C45.7258 9.25 46.9272 9.85382 47.9266 11.0615C48.926 12.2691 49.4258 13.7208 49.4258 15.4167V64.75L31.564 55.5L13.7022 64.75ZM18.8056 55.3458L31.564 48.7167L44.3224 55.3458V15.4167H18.8056V55.3458Z"
+                    fill="#1D1B20" />
+                </svg>
+              </button>
+              <div class="save-message" role="status">Saved</div>
+            </div>
+
+            <div class="more-action">
+              <button class="post-actions__more" aria-label="More options" aria-expanded="false">
+                <svg width="62" height="74" viewBox="0 0 62 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15.4942 43.1666C14.0908 43.1666 12.8894 42.5628 11.89 41.3551C10.8906 40.1475 10.3909 38.6958 10.3909 36.9999C10.3909 35.3041 10.8906 33.8523 11.89 32.6447C12.8894 31.4371 14.0908 30.8333 15.4942 30.8333C16.8977 30.8333 18.0991 31.4371 19.0985 32.6447C20.0979 33.8523 20.5976 35.3041 20.5976 36.9999C20.5976 38.6958 20.0979 40.1475 19.0985 41.3551C18.0991 42.5628 16.8977 43.1666 15.4942 43.1666ZM30.8043 43.1666C29.4009 43.1666 28.1995 42.5628 27.2001 41.3551C26.2007 40.1475 25.7009 38.6958 25.7009 36.9999C25.7009 35.3041 26.2007 33.8523 27.2001 32.6447C28.1995 31.4371 29.4009 30.8333 30.8043 30.8333C32.2077 30.8333 33.4091 31.4371 34.4086 32.6447C35.408 33.8523 35.9077 35.3041 35.9077 36.9999C35.9077 38.6958 35.408 40.1475 34.4086 41.3551C33.4091 42.5628 32.2077 43.1666 30.8043 43.1666ZM46.1144 43.1666C44.711 43.1666 43.5095 42.5628 42.5101 41.3551C41.5107 40.1475 41.011 38.6958 41.011 36.9999C41.011 35.3041 41.5107 33.8523 42.5101 32.6447C43.5095 31.4371 44.711 30.8333 46.1144 30.8333C47.5178 30.8333 48.7192 31.4371 49.7186 32.6447C50.718 33.8523 51.2177 35.3041 51.2177 36.9999C51.2177 38.6958 50.718 40.1475 49.7186 41.3551C48.7192 42.5628 47.5178 43.1666 46.1144 43.1666Z"
+                    fill="#1D1B20" />
+                </svg>
+              </button>
+              <div class="more-dropdown">
+                <nav>
+                  <ul class="more-dropdown__list">
+                    <li>
+                      <a href="#" class="more-dropdown__option">Option 1</a>
+                    </li>
+                    <li>
+                      <a href="#" class="more-dropdown__option">Option 2</a>
+                    </li>
+                    <li>
+                      <a href="#" class="more-dropdown__option">Option 3</a>
+                    </li>
+                    <li>
+                      <a href="#" class="more-dropdown__option">Option 4</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="blog-post__content">
+          <section>
+            <h2>I. Giới thiệu:</h2>
+            <p>
+              Hello ae mọi người nhé, mọi người (đặc biệt là lập trình viên
+              Software) chắc hẳn đã nghe tới Powershell, nhưng bù lại cái màn hình
+              làm việc với powershell quá ngán, nhiều người muốn đồi nhưng không
+              được nên đúng như tiêu đề, hôm nay mình sẽ chỉ cho ae cách chỉnh nền
+              trên Powershell
+            </p>
+            <p class="note">
+              Lưu ý: Blog này chỉ cho Window chứ không cho Mac hay Ubuntu nhé!(vì
+              mình cũng chưa xài chưa biết nên không biết code có đúng không)
+            </p>
+          </section>
+
+          <section>
+            <h2>II. Cách làm:</h2>
+            <h3>2. Tải Oh-my-posh và áp dụng vào powershell</h3>
+            <p>
+              Rất đơn giản, các bạn chỉ cần copy những gì mình nói vào Powershell
+              là được rồi!
+            </p>
+            <p>Đầu tiên, các bạn tất nhiên phải cài Oh-my-posh rồi 🙂</p>
+            <h4>Code cho window:</h4>
+            <code class="code-block">
+              winget install JanDeDobbeleer.OhMyPosh -s winget
+            </code>
+          </section>
+
+          <section>
+            <h3>3. Mọi điều cần thiết sau khi tải Oh-my-posh:</h3>
+            <p>
+              Đầu tiên các bạn muốn nó tương thích hầu hết icon thì hãy tải 1
+              trong bộ Nerd Font này rồi dán vào file setting.json(ở góc bên trái
+              cuối phần setting của terminal), tìm ra đoạn có chữ "profile" và ở
+              dưới có "default" rồi các bạn chèn thêm cho mình:
+            </p>
+            <code class="code-block">"font": { "face": "FONT" }</code>
+            <p>
+              hoặc các bạn có thể dùng code này vào Powershell để tải Nerd
+              Font:(Nhớ hãy dùng Powershell dưới quyền admin nhé)
+            </p>
+            <code class="code-block">oh-my-posh font install</code>
+            <p>rồi làm như bên trên thôi.</p>
+          </section>
+
+          <section>
+            <h3>Thứ 2 là thêm theme cho Powershell(nếu muốn)</h3>
+            <p>
+              Và cuối cùng là phải cài bộ themes Oh-my-posh thì các bạn dùng code
+              sau:
+            </p>
+            <code class="code-block">Get-PoshThemes</code>
+          </section>
+
+          <section>
+            <h3>4. Kích hoạt theme Oh-my-posh</h3>
+            <p>
+              Sau khi chọn 1 theme ưng ý, các bạn copy tên nó rồi nhập các code
+              sau:
+            </p>
+            <code class="code-block">echo $profile</code>
+            <p>sau đó nhập</p>
+            <code class="code-block">notepad $profile</code>
+            <p>Sau khi ra 1 file Notepad rồi các bạn nhập code sau vào nó:</p>
+            <code class="code-block">
+              oh-my-posh init pwsh --config
+              "$env:POSH_THEMES_PATH\THEMENAME.omp.json" | Invoke-Expression
+            </code>
+            <p class="note">
+              Lưu ý: THEMENAME ở đây chỉ tên theme mà bạn muốn chọn
+            </p>
+            <p>
+              Cuối cùng các bạn save file notepad đó, vào tab terminal powershell
+              mới và thưởng thức thôi!!!🤩
+            </p>
+          </section>
+
+          <section>
+            <h2>III. Tạm kết</h2>
+            <p>
+              Mình đã chỉ cho các bạn cách chỉnh Terminal theme theo Oh-my-posh,
+              mình mong các bạn ủng hộ mình, và chúc các bạn làm code thêm đẹp mắt
+              nhé!
+            </p>
+            <p class="note">
+              Lưu ý: Đây là Blog đầu tiên của mình nên có sai sót gì mong các bạn
+              bỏ qua ạ
+            </p>
+          </section>
+        </div>
+      </article>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__company-info">
+        <h2 class="footer__heading">F11 Học Lập Trình Để Đi Làm</h2>
+        <p class="footer__contact">Điện thoại: 69 6969 6969</p>
+        <p class="footer__contact">
+          Email:
+          <a href="mailto:contact@fullstack.edu.vn">contact@fullstack.edu.vn</a>
+        </p>
+        <p class="footer__address">
+          Địa chỉ: Số 1, ngõ 41, Trần Duy Hưng, Cầu Giấy, Hà Nội
+        </p>
+      </div>
+
+      <nav class="footer__nav">
+        <h2 class="footer__heading">VỀ F11</h2>
+        <div class="footer__links">
+          <a href="../about_contact/html/about.html">Giới thiệu</a>
+          <a href="../about_contact/html/contact.html">Liên hệ</a>
+          <a href="#">Điều khoản</a>
+          <a href="#">Bảo mật</a>
+        </div>
+      </nav>
+
+      <div class="footer__legal">
+        <h2 class="footer__heading">CÔNG TY CỔ PHẦN CÔNG NGHỆ GIÁO DỤC F11</h2>
+        <p class="footer__info">Mã số thuế: 6969696969</p>
+        <p class="footer__info">Ngày thành lập: 04/03/2022</p>
+        <p class="footer__description">
+          Lĩnh vực hoạt động: Giáo dục, công nghệ - lập trình. Chúng tôi tập trung
+          xây dựng và phát triển các sản phẩm mang lại giá trị cho cộng đồng lập
+          trình viên Việt Nam.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copyright">
+        © 2018 - 2025 F11. Nền tảng học lập trình hàng đầu Việt Nam
+      </p>
+      <div class="footer__social">
+        <a href="#" class="social-icon">
+          <svg width="35" height="31" viewBox="0 0 35 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="35" height="31" rx="5" fill="#FF0004" />
+            <path
+              d="M32.8708 8.29234C32.6976 7.67933 32.3448 7.11766 31.848 6.66407C31.3513 6.21048 30.7282 5.88103 30.0417 5.709C27.5333 5.1665 17.5 5.1665 17.5 5.1665C17.5 5.1665 7.46666 5.1665 4.95832 5.76067C4.27181 5.9327 3.64871 6.26215 3.15195 6.71574C2.6552 7.16933 2.30239 7.73099 2.12916 8.344C1.67009 10.5987 1.44554 12.8859 1.45832 15.1769C1.44196 17.4852 1.66653 19.7899 2.12916 22.0615C2.32014 22.6555 2.68085 23.1958 3.17645 23.6302C3.67205 24.0646 4.28577 24.3785 4.95832 24.5415C7.46666 25.1357 17.5 25.1357 17.5 25.1357C17.5 25.1357 27.5333 25.1357 30.0417 24.5415C30.7282 24.3695 31.3513 24.04 31.848 23.5864C32.3448 23.1328 32.6976 22.5712 32.8708 21.9582C33.3263 19.7205 33.5509 17.4507 33.5417 15.1769C33.558 12.8687 33.3335 10.564 32.8708 8.29234Z"
+              fill="black" />
+            <path d="M14.2187 19.4007L22.6042 15.1769L14.2187 10.9532V19.4007Z" fill="black" />
+          </svg>
+        </a>
+        <a href="#" class="social-icon">
+          <svg width="35" height="31" viewBox="0 0 35 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="35" height="31" rx="5" fill="#0C71C3" />
+            <path
+              d="M26.25 2.5835H21.875C19.9411 2.5835 18.0865 3.26393 16.719 4.4751C15.3516 5.68627 14.5833 7.32897 14.5833 9.04183V12.9168H10.2083V18.0835H14.5833V28.4168H20.4167V18.0835H24.7917L26.25 12.9168H20.4167V9.04183C20.4167 8.69926 20.5703 8.37072 20.8438 8.12848C21.1173 7.88625 21.4882 7.75016 21.875 7.75016H26.25V2.5835Z"
+              fill="black" />
+          </svg>
+        </a>
+        <a href="#" class="social-icon">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4479e13a36e2f0e06daef70a598f1a1a3a7e3770"
+            alt="TikTok" class="social-icon__tiktok" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>
