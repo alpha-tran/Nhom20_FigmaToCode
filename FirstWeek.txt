@@ -1,0 +1,28 @@
+Cường : 1 làm đăng ký, đăng nhập, bài viết , bài viết của tôi, khoá học của tôi
+
+Phước : làm giao diện lộ trình và 3 khóa học miênx phí , lộ trình học backend , trang cá nhân ( bỏ phần hoạt động)
+
+Trí : Trang chủ , trang điều khoản sử dụng ,bản tin mới
+
+hải hoàng : trang lỗi 404, 1 trang liên hệ, giới thiệu, chi tiết bài viết nổi bật.
+
+
+Dương: phân công công việc. tạo dự án jira giao việc và theo dõi tiến độ . giúp thành viên trong nhóm fix lỗi. hướng dẫn các thành viên
+
+
+
+1. khoá học pro. 2 khoá học miễn phí. 3 bài viết nổi bật.  5 trang chủ. 6. đăng kí đăng nhập .7 cài đặt. 8 lộ trình học.  9 lộ trình học forntend backend.10 trang cá nhân.
+. 11 bấm vô bài viết nổi bật. 12. bản tin mới. 13 đăng kí học. 14 khoá học của tôi. 15 bài viết của tôi. 
+
+
+
+
+
+Cường : 1 làm đăng ký, đăng nhập,
+
+
+Trí : Trang chủ ,
+
+Phước : làm giao diện lộ trình và 3 khóa học miênx phí 
+
+hải hoàng : trang lỗi 404, 1 trang liên hệ,
