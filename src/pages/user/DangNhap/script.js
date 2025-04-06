@@ -20,7 +20,7 @@ function login(username, password) {
         console.log('Đăng nhập thành công!');
         localStorage.setItem('loggedInUser', username);
         alert('Đăng nhập thành công!');
-        window.location.href = '/khoahoccuatoi/index.html'; // Chuyển hướng sau khi đăng nhập
+        window.location.href = '../khoahoccuatoi/index.html'; // Chuyển hướng sau khi đăng nhập
         return true;
     } else {
         console.log('Sai tên đăng nhập hoặc mật khẩu!');

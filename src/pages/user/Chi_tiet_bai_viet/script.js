@@ -1,5 +1,4 @@
-
-// Hàm dùng chung để load HTML và kèm theo CSS, JS nếu có
+// Save functionality // Hàm dùng chung để load HTML và kèm theo CSS, JS nếu có
 function loadComponent(url, containerId) {
   fetch(url)
     .then((response) => response.text())
@@ -41,41 +40,48 @@ loadComponent("../../../components/Header.html", "header-container");
 loadComponent("../../../components/Sidebar.html", "sidebar-container");
 loadComponent("../../../components/Footer.html", "footer-container");
 
+const saveButton = document.querySelector(".post-actions__bookmark");
+const saveMessage = document.querySelector(".save-message");
+let saveTimeout;
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Lấy nút Lộ Trình
-  const roadmapBtn = document.getElementById('roadmap-btn');
-  
-  // Thêm sự kiện click
-  if (home-nav) {
-    home-nav.addEventListener('click', function() {
-      // Chuyển hướng sang trang lộ trình
-      window.location.href = '../Lo_trinh/index.html'; 
-      
-      // Hoặc nếu bạn muốn mở trong tab mới:
-      // window.open('Lo_trinh/index.html', '_blank');
-    });
+saveButton.addEventListener("click", () => {
+  saveMessage.classList.add("show");
+
+  // Clear any existing timeout
+  if (saveTimeout) {
+    clearTimeout(saveTimeout);
   }
- 
-  if (trangchu) {
-    trangchu.addEventListener('click', function() {
-      // Chuyển hướng sang trang lộ trình
-      window.location.href = '../Khoa_hoc_mien_phi/index.html'; 
-      
-      // Hoặc nếu bạn muốn mở trong tab mới:
-      // window.open('Lo_trinh/index.html', '_blank');
-    });
+
+  // Hide message after 2 seconds
+  saveTimeout = setTimeout(() => {
+    saveMessage.classList.remove("show");
+  }, 2000);
+});
+
+// More options dropdown functionality
+const moreButton = document.querySelector(".post-actions__more");
+const moreDropdown = document.querySelector(".more-dropdown");
+
+moreButton.addEventListener("click", (e) => {
+  e.stopPropagation();
+  const isExpanded = moreButton.getAttribute("aria-expanded") === "true";
+
+  moreButton.setAttribute("aria-expanded", !isExpanded);
+  moreDropdown.classList.toggle("show");
+});
+
+// Close dropdown when clicking outside
+document.addEventListener("click", (e) => {
+  if (!moreButton.contains(e.target) && !moreDropdown.contains(e.target)) {
+    moreDropdown.classList.remove("show");
+    moreButton.setAttribute("aria-expanded", "false");
   }
-  
-  // Thêm hiệu ứng active khi click
-  const navItems = document.querySelectorAll('.nav-item');
-  navItems.forEach(item => {
-    item.addEventListener('click', function() {
-      // Xóa class active khỏi tất cả các item
-      navItems.forEach(navItem => navItem.classList.remove('active'));
-      
-      // Thêm class active vào item được click
-      this.classList.add('active');
-    });
-  });
+});
+
+// Close dropdown when pressing Escape key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && moreDropdown.classList.contains("show")) {
+    moreDropdown.classList.remove("show");
+    moreButton.setAttribute("aria-expanded", "false");
+  }
 });

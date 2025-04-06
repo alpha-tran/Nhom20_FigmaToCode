@@ -1,49 +1,41 @@
-function toggleCourses() {
-    let courseContainer = document.getElementById("courseContainer");
-    courseContainer.classList.toggle("active");
-}
+function loadComponent(url, containerId) {
+  fetch(url)
+    .then((response) => response.text())
+    .then((data) => {
+      // Chèn nội dung vào container
+      const container = document.getElementById(containerId);
+      container.innerHTML = data;
 
-// Đóng khi click ra ngoài
-document.addEventListener("click", function (event) {
-    let courseContainer = document.getElementById("courseContainer");
-    let button = document.querySelector(".my-courses-btn");
+      // Tạo DOM tạm để xử lý các thẻ link/script bên trong
+      const tempDiv = document.createElement("div");
+      tempDiv.innerHTML = data;
 
-    if (!courseContainer.contains(event.target) && event.target !== button) {
-        courseContainer.classList.remove("active");
-    }
-});
-function profile() {
-    let profileCard = document.querySelector(".profile-card");
-    profileCard.classList.toggle("show"); // Thêm/xóa class "show"
-}
-
-// Ẩn profile-card khi click ra ngoài
-document.addEventListener("click", function (event) {
-    let profileCard = document.querySelector(".profile-card");
-    let profileImage = document.querySelector(".profile-img");
-
-    // Kiểm tra nếu click ngoài profileCard và profileImage thì ẩn đi
-    if (!profileCard.contains(event.target) && !profileImage.contains(event.target)) {
-        profileCard.classList.remove("show");
-    }
-});
-function logout() {
-    localStorage.removeItem('loggedInUser');
-    console.log('Đăng xuất thành công!');
-    alert('Đăng xuất thành công!');
-    window.location.href = '/Dangnhap/index.html'; // Chuyển hướng về trang đăng nhập sau khi đăng xuất
-}
-
-// Kiểm tra trạng thái đăng nhập và ẩn nút nếu chưa đăng nhập
-document.addEventListener('DOMContentLoaded', function () {
-    const logoutButton = document.querySelector('li a[href="#"]');
-    if (logoutButton) {
-        if (!isLoggedIn()) {
-            logoutButton.style.display = 'none'; // Ẩn nút nếu chưa đăng nhập
+      // Xử lý <link rel="stylesheet">
+      tempDiv.querySelectorAll('link[rel="stylesheet"]').forEach((link) => {
+        const newLink = document.createElement("link");
+        newLink.rel = "stylesheet";
+        newLink.href = link.href;
+        // Tránh chèn trùng lặp
+        if (!document.querySelector(`link[href="${newLink.href}"]`)) {
+          document.head.appendChild(newLink);
         }
-    }
-});
+      });
 
-function isLoggedIn() {
-    return localStorage.getItem('loggedInUser') !== null;
+      // Xử lý <script src="...">
+      tempDiv.querySelectorAll('script[src]').forEach((script) => {
+        const newScript = document.createElement("script");
+        newScript.src = script.src;
+        newScript.async = false; // đảm bảo thực thi đúng thứ tự
+        document.body.appendChild(newScript);
+      });
+    })
+    .catch((error) =>
+      console.error(`Error loading component (${url}):`, error)
+    );
 }
+
+// Gọi hàm để load từng thành phần
+loadComponent("../../../components/Header.html", "header-container");
+loadComponent("../../../components/Sidebar.html", "sidebar-container");
+loadComponent("../../../components/Footer.html", "footer-container");
+

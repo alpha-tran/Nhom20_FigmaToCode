@@ -1,3 +1,4 @@
+/* Reset styles */
 * {
   margin: 0;
   padding: 0;
@@ -8,8 +9,11 @@ body {
   font-family: "Inter", sans-serif;
   min-height: 100vh;
   background-color: #fff;
+  margin: 0; /* Đảm bảo không có margin */
+  padding: 0; /* Đảm bảo không có padding */
 }
 
+/* Header styles */
 .main-header {
   display: flex;
   align-items: center;
@@ -98,7 +102,17 @@ body {
   border-radius: 50%;
 }
 
-.side-nav {
+/* Header container styles */
+#header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Sidebar styles specific to Lo Trinh */
+.lo-trinh-sidebar {
   height: 500px;
   border: 2px solid #000;
   display: flex;
@@ -113,12 +127,12 @@ body {
 }
 
 @media (max-width: 640px) {
-  .side-nav {
+  .lo-trinh-sidebar {
     display: none;
   }
 }
 
-.nav-item {
+.lo-trinh-nav-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -132,23 +146,24 @@ body {
     background-color 0.2s ease;
   border-radius: 8px;
   width: 80%;
+  text-decoration: none; /* Bỏ gạch chân cho các mục trong sidebar */
 }
 
-.nav-item:hover {
+.lo-trinh-nav-item:hover {
   background-color: rgba(0, 0, 0, 0.05);
   transform: translateY(-2px);
 }
-.nav-item:active {
+.lo-trinh-nav-item:active {
   transform: translateY(0);
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.nav-item.active {
+.lo-trinh-nav-item.active {
   background-color: rgba(0, 0, 0, 0.08);
   position: relative;
 }
 
-.nav-item.active::after {
+.lo-trinh-nav-item.active::after {
   content: "";
   position: absolute;
   left: -10px;
@@ -160,34 +175,41 @@ body {
   border-radius: 2px;
 }
 
-.nav-icon {
+.lo-trinh-nav-icon {
   width: 45px;
   height: 45px;
 }
 
-.nav-item {
+.lo-trinh-nav-item {
   width: 90%;
 }
-.nav-label {
+.lo-trinh-nav-label {
   font-size: 17px;
   font-weight: 700;
 }
-.nav-label {
+.lo-trinh-nav-label {
   font-size: 14px;
 }
 
+
+
+/* Main content */
 .main-content {
-  margin-left: 120px;
-  padding: 40px;
+  margin-left: 120px; /* Space for the sidebar */
+  margin-top: -60px;
+  box-sizing: border-box;
 }
 
 /* Responsive navigation styles */
 @media (max-width: 640px) {
-  .sidebar-nav {
+  .lo-trinh-sidebar {
     width: 70px;
   }
 }
 
+
+
+/* Section styles */
 .section-title {
   font-size: 25px;
   font-weight: 700;
@@ -259,17 +281,18 @@ body {
   padding: 4px 26px;
   font-size: 19px;
   font-weight: 600;
-  background-color: #158df4;
+  background-color: #000000;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  text-decoration: none; /* Bỏ gạch chân cho các nút */
 }
 
 .btn-primary:hover {
-  background-color: #0e6fc5;
+  background-color: #000000;
 }
 
 .btn-primary:active {
-  background-color: #0a5da6;
+  background-color: #000000;
 }
 
 .path-image {
@@ -334,6 +357,7 @@ body {
   background-color: #fff;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none; /* Bỏ gạch chân cho các nút */
 }
 
 .btn-outline:hover {
@@ -359,3 +383,15 @@ body {
     display: none;
   }
 }
+
+
+
+#footer-container a {
+  text-decoration: none; /* Bỏ gạch chân cho các liên kết trong footer */
+}
+
+/* Bỏ gạch chân cho các liên kết trong phần nội dung */
+a {
+  text-decoration: none; /* Bỏ gạch chân mặc định cho tất cả các liên kết */
+}
+

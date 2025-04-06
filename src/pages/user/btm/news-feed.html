@@ -8,324 +8,29 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
     />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-
-      body {
-        font-family: "Inter", sans-serif;
-      }
-
-      .news-feed {
-        width: 814px;
-        margin: 0 auto;
-        border-radius: 30px;
-        padding: 20px;
-        background-color: #e0e0e0;
-      }
-
-      .news-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-      }
-
-      .news-title {
-        font-family: "Inter", sans-serif;
-        font-size: 30px;
-        color: #020100;
-      }
-
-      .close-button {
-        width: 40px;
-        height: 40px;
-        border-radius: 50px;
-        font-size: 24px;
-        cursor: pointer;
-        background-color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: none;
-        transition:
-          background-color 0.2s,
-          transform 0.2s;
-      }
-
-      .close-button:hover {
-        background-color: #f0f0f0;
-        transform: scale(1.05);
-      }
-
-      .close-button:active {
-        transform: scale(0.95);
-      }
-
-      .news-content {
-        padding: 0 27px;
-      }
-
-      .news-item {
-        margin-bottom: 30px;
-      }
-
-      .hashtag {
-        font-size: 20px;
-        color: #ff8400;
-      }
-
-      .news-item-title {
-        font-size: 20px;
-        color: #020100;
-        margin-left: 5px;
-      }
-
-      .news-item-text {
-        font-family: "Inter", sans-serif;
-        font-size: 16px;
-        color: #020100;
-        margin-top: 10px;
-        line-height: 1.5;
-      }
-
-      .image-container {
-        width: 100%;
-        height: 174px;
-        overflow: hidden;
-        margin: 20px 0;
-        background-color: #d9d9d9;
-      }
-
-      .news-image {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-      }
-
-      .image-wrapper {
-        width: 100%;
-        margin: 20px 0;
-      }
-
-      .course-card {
-        width: 273px;
-        border-radius: 30px;
-        overflow: hidden;
-        margin: 20px 0;
-        background-color: #e4e4e4;
-        cursor: pointer;
-        transition:
-          transform 0.2s,
-          box-shadow 0.2s;
-      }
-
-      .course-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      }
-
-      .course-image-container {
-        width: 100%;
-        height: 150px;
-        overflow: hidden;
-      }
-
-      .course-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .course-category {
-        color: #e9e9e9;
-        font-size: 24px;
-        text-align: center;
-        margin-top: -100px;
-        text-shadow: 1px 1px #fff;
-      }
-
-      .course-subtitle {
-        font-size: 16px;
-        color: #a4a4a4;
-        margin-top: 5px;
-      }
-
-      .course-name {
-        font-size: 20px;
-        margin: 10px;
-        color: #000;
-      }
-
-      .price-container {
-        display: flex;
-        gap: 20px;
-        margin: 10px;
-      }
-
-      .original-price {
-        text-decoration: line-through;
-        color: #000;
-      }
-
-      .discounted-price {
-        color: #f34500;
-      }
-
-      .course-stats {
-        display: flex;
-        gap: 10px;
-        margin: 10px;
-      }
-
-      .stat-item {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        color: #000;
-        font-size: 16px;
-      }
-
-      .stat-icon {
-        width: 24px;
-        height: 24px;
-      }
-
-      .course-highlight {
-        margin: 20px 0;
-      }
-
-      .highlight-text {
-        font-size: 20px;
-      }
-
-      .highlight-accent {
-        color: #fc0000;
-      }
-
-      .course-description {
-        font-size: 16px;
-        margin-top: 10px;
-      }
-
-      .center-text {
-        font-family: "Inter", sans-serif;
-        font-size: 16px;
-        color: #020100;
-        margin-top: 10px;
-        line-height: 1.5;
-        text-align: center;
-      }
-
-      .feature-list {
-        margin: 20px 0;
-      }
-
-      .feature-title {
-        font-size: 16px;
-        margin-bottom: 10px;
-      }
-
-      .feature-link {
-        font-size: 16px;
-        color: #000;
-        text-decoration: underline;
-        margin: 5px 0;
-        display: block;
-        cursor: pointer;
-        transition: color 0.2s;
-      }
-
-      .feature-link:hover {
-        color: #ff8400;
-      }
-
-      .feature-note {
-        font-size: 16px;
-        margin: 5px 0;
-      }
-
-      @media (max-width: 991px) {
-        .news-feed {
-          width: 90%;
-          margin: 0 auto;
-        }
-
-        .course-card {
-          width: 100%;
-        }
-      }
-
-      @media (max-width: 640px) {
-        .news-feed {
-          width: 95%;
-          border-radius: 15px;
-          padding: 10px;
-        }
-
-        .news-content {
-          padding: 0 15px;
-        }
-
-        .course-stats {
-          flex-direction: column;
-        }
-
-        .highlight-text {
-          font-size: 18px;
-        }
-      }
-
-      .interactive-button {
-        display: inline-block;
-        padding: 8px 16px;
-        background-color: #ff8400;
-        color: white;
-        border-radius: 4px;
-        margin-top: 10px;
-        cursor: pointer;
-        transition: background-color 0.2s;
-      }
-
-      .interactive-button:hover {
-        background-color: #e67700;
-      }
-    </style>
-  </head>
-  <body>
+    <link rel="stylesheet" href="news-feed.css" />
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Close button functionality
-        const closeButton = document.querySelector(".close-button");
-        const newsFeed = document.querySelector(".news-feed");
-
-        closeButton.addEventListener("click", function () {
-          newsFeed.style.display = "none";
-        });
-      });
+      function goBack() {
+        window.history.back(); // Quay lại trang trước đó
+      }
     </script>
     <main class="news-feed">
       <header class="news-header">
         <h1 class="news-title">Bản tin mới</h1>
-        <a href="http://127.0.0.1:5500/Nhom20_FigmaToCode/trangchu/index.html" class="nav-item" role="button" aria-label="Trang chủ">
-          <i class="close-button">x</i>
-          
-        </a>
+        <a
+          href="javascript:void(0);"
+          class="close-button"
+          aria-label="Đóng"
+          onclick="goBack()"
+        >x</a>
       </header>
       <div class="news-content">
+        <!-- Bài viết 1 -->
         <article class="news-item">
-          <span class="hashtag">#</span>
-          <h2 class="news-item-title">Chia Sẻ Từ Học Viên Đã Đi Làm!</h2>
+          <span class="hashtag">#ChiaSẻ</span>
+          <h2 class="news-item-title">Chia sẻ từ học viên đã đi làm!</h2>
           <p class="news-item-text">
-            Chia sẻ của bạn Minh Đ���c sau khi hoàn thành khóa học lập trình web
+            Chia sẻ của bạn Minh Đức sau khi hoàn thành khóa học lập trình web
             tại F8. Hiện tại Đức đã có công việc ổn định và thu nhập hấp dẫn tại
             tập đoàn công nghệ hàng đầu VN.
           </p>
@@ -345,15 +50,19 @@
           />
         </div>
 
+        <!-- Bài viết 2 -->
         <article class="news-item">
-          <span class="hashtag">#</span>
-          <h2 class="news-item-title">Bảo Vệ Quyền Lợi Của Học Viên Pro</h2>
+          <span class="hashtag">#BảoVệ</span>
+          <h2 class="news-item-title">Bảo vệ quyền lợi của học viên Pro</h2>
           <p class="news-item-text">
             Hiện tại, F11 đang tiến hành rà soát và xử lý toàn bộ tài khoản vi
             phạm chính sách, đặc biệt là những tài khoản thực hiện download trái
             phép video từ các khóa học Pro.
-            <br />
-            Toàn bộ video Pro trên F8 đều được bảo vệ bản quyền, cho phép
+          </p>
+          <p class="news-item-text">
+            Toàn bộ video Pro trên F11 đều được bảo vệ bản quyền. Học viên có
+            thông tin về các nguồn phát tán video bị leak, vui lòng gửi email
+            đến F11 để kiểm tra và xử lý nhằm đảm bảo quyền lợi chung.
           </p>
         </article>
 
@@ -365,109 +74,8 @@
           />
         </div>
 
-        <p class="news-item-text">
-          Học viên có thông tin về các nguồn phát tán video bị leak, vui lòng
-          gửi email đến F8 sẽ kiểm tra và xử lý để đảm bảo quyền lợi chung.
-          <br /><br />
-          Cảm ơn các bạn đã luôn đồng hành và ủng hộ F11!
-        </p>
-
-        <article class="news-item">
-          <span class="hashtag">#</span>
-          <h2 class="news-item-title">
-            <span>giảm giá các khóa học pro</span>
-            <span>!</span>
-          </h2>
-        </article>
-
-        <a href="#" class="course-card">
-          <div class="course-image-container">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/df0bcbe87f4c7d5b0929279afa9fad12c517eca2"
-              alt="HTML CSS Course"
-              class="course-image"
-            />
-          </div>
-          <div>
-            <div class="course-category">
-              <span>HTML, CSS</span>
-              <div class="course-subtitle">cho người mới bắt đầu</div>
-            </div>
-            <h3 class="course-name">HTML CSS Pro</h3>
-            <div class="price-container">
-              <div class="original-price">2.500.000đ</div>
-              <div class="discounted-price">1.299.000đ</div>
-            </div>
-            <div class="course-stats">
-              <div class="stat-item">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/51fdd9be2588c177e19fac4a20f135c51d6e4d8e"
-                  alt="Users"
-                  class="stat-icon"
-                />
-                <span>133.350</span>
-              </div>
-              <div class="stat-item">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/b1718af00b7f1419571f459a7722a6623c61d90f"
-                  alt="Videos"
-                  class="stat-icon"
-                />
-                <span>591</span>
-              </div>
-              <div class="stat-item">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/1e5abd714008ab4b876c60fe15b5ee4b6eb820fb"
-                  alt="Duration"
-                  class="stat-icon"
-                />
-                <span>116h50p</span>
-              </div>
-            </div>
-          </div>
-        </a>
-
-        <section class="course-highlight">
-          <p class="highlight-text">
-            <span>Đã có 133.350 người học khóa HTML CSS Pro</span>
-            <span class="highlight-accent">!!!</span>
-          </p>
-          <p class="course-description">
-            Khóa học HTML &amp; CSS giúp bạn tạo website từ cơ bản đến nâng cao,
-            học cách sử dụng HTML và CSS để thiết kế giao diện đẹp mắt.
-          </p>
-        </section>
-
-        <p class="center-text">
-          Chúc các bạn học tập vui vẻ tại F11 🤗
-          <br /><br />
-          <a href="#" class="interactive-button">Đăng ký ngay</a>
-        </p>
-
-        <article class="news-item">
-          <span class="hashtag">#</span>
-          <h2 class="news-item-title">
-            Ra mắt Dev Mode giúp học qua video hiệu quả hơn!
-          </h2>
-          <p class="news-item-text">
-            Khi học qua video các bạn thường thực hành lại bằng VS Code, điều
-            này cũng khá phiền nên nhiều khi chúng ta lười, không "thèm" thực
-            hành nữa. Hiệu quả học tập bị giảm sút :(
-            <br /><br />
-            Với Dev Mode, các bạn có thể vừa xem video vừa code cùng lúc 😎.
-          </p>
-        </article>
-
-        <div class="image-wrapper">
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/46e0d461f32496733d6368654e489b90cc9e4944"
-            alt="Dev Mode"
-            class="news-image"
-          />
-        </div>
-
         <section class="feature-list">
-          <h3 class="feature-title">Khóa học Pro tại F8:</h3>
+          <h3 class="feature-title">Khóa học Pro tại F11:</h3>
           <a href="#" class="feature-link">✅ Khóa học HTML CSS</a>
           <a href="#" class="feature-link"
             >✅ Khóa học Sass và tiền xử lý của CSS</a
@@ -479,9 +87,9 @@
         </section>
 
         <article class="news-item">
-          <span class="hashtag">#</span>
+          <span class="hashtag"></span>
           <h2 class="news-item-title">
-            Nhóm học tập của F11 trên FB đã được thanh lọc!
+            # Nhóm học tập của F11 trên FB đã được thanh lọc!
           </h2>
           <p class="news-item-text">
             Nhằm tạo ra môi trường tích cực, mọi người vui vẻ giúp đỡ nhau tốt
@@ -493,26 +101,26 @@
         </article>
 
         <article class="news-item">
-          <span class="hashtag">#</span>
-          <h2 class="news-item-title">F8 ra mắt chức năng NewFeeds 😆</h2>
+          <span class="hashtag"></span>
+          <h2 class="news-item-title"># F11 ra mắt chức năng NewFeeds 😆</h2>
           <p class="news-item-text">
-            Các b���n ơiiiii,
+            Các bạn ơiiiii,
             <br /><br />
             Từ nay các Admin của F11 sẽ cập nhật các tin tức mới và Hot nhất tại
-            bảng tin này, giúp các bạn luôn biết F8 có gì mới nhé!
+            bảng tin này, giúp các bạn luôn biết F11 có gì mới nhé!
             <br /><br />
             Chúc cả nhà ngày cuối tuần vui vẻ nhaa 😘
           </p>
         </article>
 
         <article class="news-item">
-          <span class="hashtag">#</span>
+          <span class="hashtag"></span>
           <h2 class="news-item-title">
-            Nhận diện tài khoản được xác thực bởi F8
+            #Nhận diện tài khoản được xác thực bởi F8
           </h2>
           <p class="news-item-text">
             Các tài khoản được Tích xanh là các tài khoản uy tín, được xác thực
-            bởi F8. Đây là các tài khoản thuộc đội ngũ hỗ trợ của F8 hoặc là các
+            bởi F11. Đây là các tài khoản thuộc đội ngũ hỗ trợ của F8 hoặc là các
             thành viên có sức ảnh hưởng, có sự cống hiến cho sự phát triển chung
             của cộng đồng.
           </p>

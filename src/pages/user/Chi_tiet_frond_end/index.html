@@ -1,49 +1,103 @@
 <!doctype html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lộ trình học Front-end</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.30.0/tabler-icons.min.css"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- Include Header -->
-    <div id="header-container"></div>
 
-    <div class="main-container">
-      <!-- Include Navigation -->
-      <div id="navigation-container"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lộ trình học Front-end</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.30.0/tabler-icons.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-      <!-- Include Main Content -->
-      <div id="content-container"></div>
-    </div>
+<body>
+  <!-- Include Header -->
+  <!-- Header -->
+  <div id="header-container"></div>
+  <!-- Sidebar -->
+  <div id="sidebar-container"></div>
 
-    <script>
-      // Function to load HTML components
-      async function loadComponent(url, containerId) {
-        try {
-          const response = await fetch(url);
-          const html = await response.text();
-          document.getElementById(containerId).innerHTML = html;
-        } catch (error) {
-          console.error(`Error loading ${url}:`, error);
-        }
-      }
+  <div class="main-container">
+    <main class="main-content">
+      <h1 class="page-title">Lộ trình học Front-end</h1>
 
-      // Load all components when the page loads
-      window.addEventListener("DOMContentLoaded", () => {
-        loadComponent("header.html", "header-container");
-        loadComponent("navigation.html", "navigation-container");
-        loadComponent("content.html", "content-container");
-      });
-    </script>
-  </body>
+      <section class="intro-section">
+        <p class="intro-text">
+          Hầu hết các websites hoặc ứng dụng di động đều có 2 phần là Front-end và
+          Back-end. Front-end là phần giao diện người dùng nhìn thấy và có thể tương
+          tác, đó chính là các ứng dụng mobile hay những website bạn đã từng sử
+          dụng. Vì vậy, nhiệm vụ của lập trình viên Front-end là xây dựng các giao
+          diện đẹp, dễ sử dụng và tối ưu trải nghiệm người dùng.
+          <br /><br />
+          Tại Việt Nam, lương trung bình cho lập trình viên front-end vào khoảng 16.000.000đ / tháng. 
+          <br /><br />
+          Dưới đây là các khóa học F11 đã tạo ra dành cho bất cứ ai theo đuổi sự
+          nghiệp trở thành một lập trình viên Front-end.
+        </p>
+      </section>
+
+      <section class="notice-box">
+        <div class="notice-indicator"></div>
+        <p class="notice-text">
+          Các khóa học có thể chưa đầy đủ, F11 vẫn đang nỗ lực hoàn thiện trong thời
+          gian sớm nhất.
+        </p>
+      </section>
+
+      <section class="course-section">
+        <h2 class="section-title">1. Tìm hiểu về ngành IT</h2>
+        <p class="section-description">
+          Để theo ngành IT - Phần mềm cần rèn luyện những kỹ năng nào? Bạn đã có sẵn
+          tố chất phù hợp với ngành chưa? Cùng thăm quan các công ty IT và tìm hiểu
+          về văn hóa, tác phong làm việc của ngành này nhé các bạn.
+        </p>
+
+        <article class="course-card">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5141426dd208581815a4a6bb0a25752836d1d906" alt=""
+            class="course-image" />
+          <div class="course-details">
+            <h3 class="course-title">Kiến thức nhập môn IT</h3>
+            <p class="course-price">Miễn phí</p>
+            <p class="course-description">
+              Để có cái nhìn tổng quan về ngành IT Lập trình web các bạn nên xem các
+              videos tại khóa này trước nhé.
+            </p>
+            <button class="view-course-button">
+              <a href="/src/pages/user/Khoa_hoc_mien_phi/index.html" style="text-decoration: none; color: white;">XEM KHÓA HỌC</a>
+            </button>
+          </div>
+        </article>
+      </section>
+
+      <section class="course-section">
+        <h2 class="section-title">2. HTML và CSS</h2>
+        <p class="section-description">
+          Để học web Front-end chúng ta luôn bắt đầu với ngôn ngữ HTML và CSS, đây
+          là 2 ngôn ngữ có mặt trong mọi website trên internet. Trong khóa học này
+          F8 sẽ chia sẻ từ những kiến thức cơ bản nhất. Sau khóa học này bạn sẽ tự
+          làm được 2 giao diện websites là The Band và Shopee.
+        </p>
+
+        <article class="course-card">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6207ddda0f3b13ccc562597f01558e2ced76e6c6" alt=""
+            class="course-image" />
+          <div class="course-details">
+            <h3 class="course-title">HTML CSS pro</h3>
+            <p class="course-price">Miễn phí</p>
+            <p class="course-description">
+              Khóa học HTML CSS Pro phù hợp cho cả người mới bắt đầu, lên tới 8 dự
+              án trên Figma, 300+ bài tập và
+            </p>
+            <button class="view-course-button">XEM KHÓA HỌC</button>
+          </div>
+        </article>
+      </section>
+    </main>
+
+  </div>
+  <div id="footer-container"></div>
+  <script src="./script.js"></script>
+
+</body>
+
 </html>

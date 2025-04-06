@@ -120,6 +120,8 @@ body {
 .layout {
   display: flex;
   flex: 1;
+  padding-top: 40px;
+  padding-left: 50px;
 }
 
 /* Sidebar styles */
