@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learning Platform</title>
+  <!-- Base styles -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Component-specific styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.30.0/tabler-icons.min.css" />
+</head>
+
+<body>
+  <div id="header-container"></div>
+  <div id="sidebar-container"></div>
+  <div class="app-container">
+    <div class="content-wrapper">
+      <main class="main-content">
+        <section class="course-info">
+          <h2 class="section-title">Bạn sẽ học được gì ?</h2>
+          <p class="learning-outcome">
+            Biết cách tự tạo động lực cho bản thân
+          </p>
+          <h3 class="course-title">HTML CSS từ Zero đến Hero</h3>
+          <p class="learning-outcome">
+            Làm chủ Flexbox khi dựng bố cục website
+          </p>
+          <p class="learning-outcome">
+            Biết cách đặt tên class CSS theo chuẩn BEM
+          </p>
+          <p class="learning-outcome">
+            Biết cách xây dựng giao diện web với HTML CSS
+          </p>
+          <p class="course-description">
+            Trong khóa này chúng ta sẽ cùng nhau xây dựng giao diện 2 trang
+            web là the Band &amp; Shoppe
+          </p>
+
+          <h2 class="section-title">Nội dung khóa học</h2>
+          <p class="course-stats">
+            4 chương - 12 bài học - thời lượng 03 giờ 26 phút
+          </p>
+
+          <div class="course-modules">
+            <button type="button" class="module-header expanded" aria-expanded="true" aria-controls="module-1-lessons">
+              <h3 class="module-title">1. Khái niệm kỹ thuật cần thiết</h3>
+              <span class="lesson-count">3 bài học</span>
+            </button>
+            <div id="module-1-lessons" class="module-lessons">
+              <button type="button" class="lesson-title">
+                Mô hình Client - server là gì ?
+              </button>
+              <button type="button" class="lesson-title">
+                Domain là gì ? Tên miền là gì ?
+              </button>
+              <button type="button" class="lesson-title">
+                Mua áo F8 | Đăng ký học Offline
+              </button>
+            </div>
+
+            <button type="button" class="module-header" aria-expanded="false" aria-controls="module-2-lessons">
+              <h3 class="module-title">2. Môi trường , con người IT</h3>
+              <span class="lesson-count">3 bài học</span>
+            </button>
+            <div id="module-2-lessons" class="module-lessons">
+              <button type="button" class="lesson-title">
+                Học IT cần tố chất gì?
+              </button>
+              <button type="button" class="lesson-title">
+                Làm việc với môi trường IT
+              </button>
+              <button type="button" class="lesson-title">
+                Các công cụ cần thiết
+              </button>
+            </div>
+
+            <button type="button" class="module-header" aria-expanded="false" aria-controls="module-3-lessons">
+              <h3 class="module-title">3. Phương pháp , định hướng</h3>
+              <span class="lesson-count">3 bài học</span>
+            </button>
+            <div id="module-3-lessons" class="module-lessons">
+              <button type="button" class="lesson-title">
+                Phương pháp học lập trình
+              </button>
+              <button type="button" class="lesson-title">
+                Định hướng nghề nghiệp
+              </button>
+              <button type="button" class="lesson-title">
+                Lộ trình học tập
+              </button>
+            </div>
+
+            <button type="button" class="module-header" aria-expanded="false" aria-controls="module-4-lessons">
+              <h3 class="module-title">4. Hoàn thành khóa học</h3>
+              <span class="lesson-count">3 bài học</span>
+            </button>
+            <div id="module-4-lessons" class="module-lessons">
+              <button type="button" class="lesson-title">
+                Tổng kết khóa học
+              </button>
+              <button type="button" class="lesson-title">
+                Nhận chứng chỉ
+              </button>
+              <button type="button" class="lesson-title">
+                Các khóa học tiếp theo
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- Course Preview Sidebar -->
+      <aside class="course-preview">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/165d26bfbbc3e55a228fdb9bc1aa0cf4888053d4"
+          alt="Course Preview" class="preview-image" />
+      </aside>
+    </div>
+  </div>
+
+  <div id="footer-container"></div>
+  <script src="./script.js"></script>
+</body>
+
+</html>

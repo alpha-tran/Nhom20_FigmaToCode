@@ -1,0 +1,42 @@
+
+/* Nội dung chính căn chỉnh lại */
+.content-wrapper {
+  margin-left: 110px; /* Đẩy nội dung chính sang phải để tránh Sidebar */
+  margin-top: 30px; /* Đẩy nội dung chính xuống dưới Header */
+  display: flex;
+  gap: 20px;
+}
+
+/* Chỉnh lại bài viết nổi bật */
+.featured-posts .post-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  transition: transform 0.3s, box-shadow 0.2s;
+}
+
+.featured-posts .post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Quảng cáo căn chỉnh lại */
+.ads-section {
+  flex: 1;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.ads-section img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}

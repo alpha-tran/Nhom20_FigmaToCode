@@ -1,0 +1,67 @@
+.sidebar-nav {
+  position: absolute; /* Đổi từ fixed sang absolute */
+  left: 0; /* Đặt Sidebar ở bên trái */
+  top: 96px; /* Khoảng cách từ trên xuống (phụ thuộc vào Header) */
+  width: 105px; /* Chiều rộng Sidebar */
+  height: calc(100vh - 96px); /* Chiều cao Sidebar, trừ đi chiều cao Header */
+  background-color: #fff; /* Màu nền Sidebar */
+  z-index: 1; /* Đảm bảo Sidebar nằm dưới các thành phần khác */
+  display: flex; /* Hiển thị các mục trong Sidebar */
+  flex-direction: column; /* Sắp xếp các mục theo cột */
+  gap: 10px; /* Khoảng cách giữa các mục */
+  overflow-y: auto; /* Thêm thanh cuộn nếu nội dung vượt quá chiều cao */
+}
+  
+.sidebar-nav::-webkit-scrollbar {
+    width: 4px;
+}
+  
+.sidebar-nav::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+.sidebar-nav::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+  
+.sidebar-nav::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+  
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 11px 0;
+    gap: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+    color: #000; /* Đặt màu chữ là đen */
+    text-decoration: none; /* Bỏ gạch chân */
+}
+  
+.nav-item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+    color: #000; /* Đảm bảo chữ vẫn là màu đen khi hover */
+}
+  
+.nav-item:active {
+    transform: translateY(1px);
+    color: #000; /* Đảm bảo chữ vẫn là màu đen khi active */
+}
+  
+.nav-item:focus {
+    outline: 2px solid rgba(0, 0, 0, 0.3);
+    outline-offset: 2px;
+}
+  
+.nav-item i {
+    font-size: 20px;
+}
+  
+.nav-item span {
+    font-size: 12px;
+}
