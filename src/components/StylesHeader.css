@@ -1,0 +1,489 @@
+/* Reset margin/padding mặc định để header nằm sát mép */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header luôn nằm trên cùng, full chiều ngang */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;               /* chiều cao header */
+  padding: 0 20px;            /* khoảng cách trái‑phải */
+  box-sizing: border-box;     /* bao gồm padding vào width */
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+  z-index: 1000;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-left: auto;
+}
+.logo-container {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    align-items: stretch;
+    gap: 27px;
+    color: #000; /* Đặt màu chữ là đen */
+    font-weight: 700;
+}
+
+
+.logo-container a {
+    text-decoration: none; /* Bỏ gạch chân cho liên kết trong logo */
+    color: #000; /* Đặt màu chữ là đen */
+}
+
+
+.logo {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 51px;
+    border-radius: 50px;
+    flex-shrink: 0;
+}
+
+.brand-name {
+    margin-top: auto;
+    margin-bottom: auto;
+    flex-basis: auto;
+    font-size: 17px;
+    color: #000; /* Đặt màu chữ là đen */
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 40px 52px;
+    font-weight: 400;
+    flex-wrap: wrap;
+    color: #000; /* Đặt màu chữ là đen */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(207, 207, 207, 1);
+    padding: 10px 15px; /* Điều chỉnh padding để cân đối */
+    gap: 10px; /* Khoảng cách giữa icon và input */
+    flex-grow: 1;
+    color: #000; /* Đặt màu chữ là đen */
+}
+
+.search-icon {
+    width: 20px; /* Đặt kích thước icon nhỏ hơn nếu cần */
+    height: 20px;
+    object-fit: contain;
+    object-position: center;
+}
+
+
+.search-input {
+    flex-grow: 1; /* Đảm bảo input chiếm toàn bộ không gian còn lại */
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px; /* Kích thước chữ */
+    color: #000; /* Đặt màu chữ là đen */
+    font-family: inherit;
+}
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #cfcfcf;
+    border-radius: 25px;
+    padding: 5px 10px; /* Giảm padding để thu nhỏ chiều cao */
+    height: 30px;
+    width: 400px; /* Giảm chiều rộng của thanh tìm kiếm */
+    background-color: #e7e7e7;
+}
+
+.search-container .search-input {
+    border: none;
+    outline: none;
+    font-size: 14px; /* Giảm kích thước chữ */
+    color: #000;
+    background-color: transparent;
+    width: 100%; /* Đảm bảo input chiếm toàn bộ chiều rộng còn lại */
+}
+
+.user-controls {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    color: #000000;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+
+.my-courses-btn {
+    text-decoration: none; /* Bỏ gạch chân cho nút "Khóa học của tôi" */
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-color: rgba(0, 0, 0, 0.2);
+    border-style: solid;
+    border-width: 1px;
+    align-self: stretch;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 11px 15px;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #000; /* Đặt màu chữ là đen */
+}
+
+.my-courses-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+}
+
+.my-courses-btn:active {
+    transform: translateY(1px);
+}
+
+.my-courses-btn:focus {
+    outline: 2px solid rgba(0, 0, 0, 0.3);
+    outline-offset: 2px;
+}
+
+.user-avatar {
+    text-decoration: none; /* Bỏ gạch chân cho biểu tượng thông báo và avatar */
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 40px;
+    align-self: stretch;
+    margin-top: auto;
+    margin-bottom: auto;
+    flex-shrink: 0;
+    overflow: hidden;
+    cursor: pointer;
+    color: #000; /* Đặt màu chữ là đen */
+}
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .brand-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .search-container {
+    position: relative;
+  }
+  
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+  }
+  
+  .search-input {
+    padding: 8px 8px 8px 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .my-courses-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .notification-icon,
+  .user-avatar {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .panel {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+
+/* Course container styles */
+.course-container {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  z-index: 1000;
+}
+
+.course-container.active {
+  display: block;
+}
+
+/* Profile card styles */
+.profile-card {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.profile-card.show {
+  display: block;
+}
+
+/* General button styles */
+.my-courses-btn {
+  padding: 8px 20px;
+  border-radius: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.my-courses-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.notification-icon,
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+  .course-container {
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 0 20px;
+    font-family: sans-serif;
+  }
+  .course-container .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  .course-container .header h2 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  .course-container .view-all {
+    font-size: 0.95rem;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .course-container .view-all:hover {
+    color: #0056b3;
+  }
+
+  .course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .student-card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+
+  .course-item img {
+    width: 100%;
+    height: 50px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .course-info {
+    padding: 16px;
+  }
+  .course-info h3 {
+    font-size: 1.1rem;
+    margin: 0 0 8px;
+    color: #333;
+  }
+  .course-info p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 0 12px;
+  }
+
+  .progress-bar {
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+    height: 8px;
+  }
+  .progress {
+    background: #28a745;
+    height: 100%;
+    transition: width 0.3s ease;
+  }
+
+  /* Responsive nhỏ hơn 600px */
+  @media (max-width: 600px) {
+    .course-list {
+      grid-template-columns: 1fr;
+    }
+  }
+
+/* CSS */
+.profile-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  /* nếu cần canh phải/căn giữa thì thêm justify-content */
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.profile-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 260px; /* bạn có thể chỉnh rộng/hẹp tùy ý */
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+.profile-info h2 {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.profile-info p {
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* Dùng grid để chia menu thành 2 cột, hàng cách đều */
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 12px;
+}
+
+.menu li {
+  margin: 0;
+}
+
+.menu li a {
+  display: block;
+  padding: 8px;
+  border-radius: 4px;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.menu li a:hover {
+  background: #f5f5f5;
+}
+
+/* cho <hr> ngắt dòng và span full-width */
+.menu hr {
+  grid-column: 1 / -1;
+  border: none;
+  border-top: 1px solid #eaeaea;
+  margin: 8px 0;
+}

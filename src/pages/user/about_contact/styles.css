@@ -1,0 +1,571 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  height: 100%;
+}
+
+/* Header styles */
+.main-header {
+  width: 100%;
+  height: 96px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+}
+
+
+.logo {
+  width: 51px;
+  height: 51px;
+  border-radius: 50px;
+}
+
+.brand-name {
+  margin-left: 26px;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.search-container {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  width: 603px;
+  height: 51px;
+  border: 1px solid #cfcfcf;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.search-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  width: 100%;
+  margin-left: 16px;
+  font-size: 17px;
+  color: #8c8c8c;
+  background: transparent;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-left: auto;
+}
+
+.my-courses {
+  padding: 8px 12px;
+  border-radius: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.clickable {
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    opacity 0.2s;
+}
+
+.clickable:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.clickable:active {
+  transform: scale(0.98);
+}
+
+.notification-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.profile-img {
+  width: 60px;
+  height: 61px;
+  border-radius: 50px;
+}
+
+/* Intro section styles */
+.intro-section {
+  padding: 100px 80px;
+  background-color: #129cdd;
+}
+
+.intro-container {
+  margin: 0 auto;
+  padding: 0 90px;
+  max-width: 1512px;
+  color: #fff;
+}
+
+.intro-title {
+  font-size: 31px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.logo-container {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.f11-logo {
+  max-width: 737px;
+}
+
+.intro-content {
+  max-width: 1512px;
+}
+
+.section-title {
+  font-size: 31px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.paragraph {
+  font-size: 20px;
+  line-height: 34px;
+  margin-bottom: 20px;
+}
+
+/* Vision section styles */
+.vision-section {
+  padding: 59px 87px;
+  background-color: #fff;
+}
+
+.vision-container {
+  margin: 0 auto;
+  max-width: 1512px;
+}
+
+.vision-title,
+.values-title {
+  color: #0c71c3;
+  font-size: 31px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.vision-text {
+  font-size: 20px;
+  line-height: 34px;
+  margin-bottom: 30px;
+}
+
+.values-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.value-item {
+  font-size: 20px;
+  line-height: 34px;
+}
+
+/* Benefits section styles */
+.benefits-section {
+  padding: 40px 0;
+  background-color: #fff;
+}
+
+.benefits-container {
+  margin: 0 auto;
+  padding: 0 90px;
+  max-width: 1512px;
+}
+
+.benefits-title {
+  color: #0c71c3;
+  font-size: 31px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.benefit-card {
+  padding: 20px;
+}
+
+.benefit-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.benefit-text {
+  font-size: 20px;
+  line-height: 34px;
+}
+
+/* Workplace section styles */
+.workplace-section {
+  padding: 60px 0;
+  color: #fff;
+  background-color: #129cdd;
+}
+
+.workplace-container {
+  margin: 0 auto;
+  padding: 0 90px;
+  max-width: 1512px;
+}
+
+.workplace-title {
+  font-size: 31px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.workplace-content {
+  margin-bottom: 40px;
+}
+
+.workplace-quote {
+  padding: 27px 66px;
+  font-size: 25px;
+  line-height: 34px;
+  color: #000;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+/* Footer styles */
+.main-footer {
+  padding: 40px 0;
+  background-color: #000;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin-top: auto;
+}
+
+.footer-container {
+  margin: 0 auto;
+  margin-bottom: 0;
+  padding: 0 39px;
+  max-width: 1728px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.footer-heading {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.footer-text,
+.footer-item {
+  color: #fff;
+  font-size: 16px;
+  line-height: 34px;
+}
+
+.footer-list {
+  list-style: none;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.footer-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.social-media {
+  display: flex;
+  gap: 19px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  width: 35px;
+  height: 35px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.copyright {
+  color: #fff;
+  font-size: 16px;
+}
+
+/* Notification styles */
+.notification-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    visibility 0s,
+    opacity 0.3s;
+}
+
+.notification-container.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.notification-message {
+  background-color: #333;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  max-width: 300px;
+}
+
+/* Media queries */
+@media (max-width: 991px) {
+
+
+  .search-container {
+    width: 300px;
+  }
+
+  .intro-container,
+  .vision-container,
+  .benefits-container,
+  .workplace-container {
+    padding: 0 20px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-container {
+    padding: 0 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-container {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .brand-name {
+    font-size: 14px;
+  }
+
+  .search-container {
+    order: 3;
+    width: 100%;
+  }
+
+  .my-courses {
+    font-size: 14px;
+  }
+
+  .intro-container,
+  .vision-container,
+  .benefits-container,
+  .workplace-container {
+    padding: 0 15px;
+  }
+
+  .paragraph,
+  .vision-text,
+  .benefit-text {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .workplace-quote {
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-heading {
+    font-size: 14px;
+  }
+
+  .footer-text,
+  .footer-item {
+    font-size: 14px;
+  }
+}
+
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  background-color: #fff;
+  padding-left: 120px;
+  padding-top: 80px;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 1524px;
+}
+
+.contact-title {
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-size: 31px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.contact-description {
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34px;
+  margin-bottom: 24px;
+}
+
+.contact-info {
+  margin-bottom: 40px;
+  font-style: normal;
+}
+
+.info-item {
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34px;
+  margin-bottom: 16px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  color: #1e1e1e;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 12px 16px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #1e1e1e;
+  background-color: #fff;
+}
+
+.form-button {
+  width: 100%;
+  height: 44px;
+  border-radius: 40px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  margin-top: 16px;
+  background-color: #007aff;
+}
+
+@media (max-width: 991px) {
+  .contact-section {
+    padding: 32px 24px;
+  }
+
+  .contact-title {
+    font-size: 28px;
+  }
+
+  .contact-description,
+  .info-item {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-section {
+    padding: 24px 16px;
+  }
+
+  .contact-title {
+    font-size: 24px;
+  }
+
+  .contact-description,
+  .info-item {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .form-group {
+    gap: 6px;
+  }
+
+  .form-input,
+  .form-textarea {
+    min-height: 60px;
+  }
+}

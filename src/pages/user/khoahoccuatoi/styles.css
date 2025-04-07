@@ -1,0 +1,91 @@
+/* Base styles */
+body {
+  font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Main content styles */
+.main-content {
+  background-color: #fff;
+  padding: 52px 80px 141px;
+  flex-grow: 1;
+  overflow: hidden;
+  margin-left: 70px;
+}
+
+.page-title {
+  color: #000;
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.section-title {
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.incomplete-title {
+  margin-top: 50px;
+}
+
+/* Course card styles */
+.course-card {
+  border-radius: 20px;
+  background-color: #e0e0e0;
+  width: 268px;
+  padding-bottom: 13px;
+  overflow: hidden;
+  margin-top: 34px;
+}
+
+.course-image {
+  width: 100%;
+  aspect-ratio: 1.87;
+  object-fit: contain;
+  border-radius: 20px 20px 0 0;
+}
+
+.course-details {
+  padding: 31px 20px 0;
+}
+
+.course-title {
+  color: #050505;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.course-timestamp {
+  color: #000;
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+.progress-bar {
+  border-radius: 50px;
+  background-color: #d9d9d9;
+  margin-top: 8px;
+}
+
+.progress-indicator {
+  width: 100%;
+  aspect-ratio: 45.45;
+  object-fit: contain;
+}
+
+.incomplete-courses {
+  display: flex;
+  gap: 86px;
+  flex-wrap: wrap;
+}
+
+/* Bỏ gạch chân cho tất cả các liên kết */
+a {
+  text-decoration: none;
+}
+
+/* Đảm bảo khi hover cũng không có gạch chân */
+a:hover {
+  text-decoration: none;
+}

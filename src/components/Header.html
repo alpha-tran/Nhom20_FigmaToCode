@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Header - Học lập trình</title>
+  <link rel="stylesheet" href="/src/components/StylesHeader.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="logo-container">
+      <a href="/src/pages/user/trangchu/index.html" class="logo-link">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0f9b8f05e71a1e40441ed262794c37cbb7be4ca8"
+          alt="Logo Học Lập Trình" class="logo" />
+      </a>
+      <h1 class="brand-name">Học lập trình</h1>
+    </div>
+
+    <div class="header-actions">
+      <div class="search-container">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2896ef2e05ab4efbc2a64f0dd0fa62f18dc1e642" alt="Search"
+          class="search-icon" />
+        <input type="text" placeholder="Tìm kiếm khóa học, bài viết, video..." class="search-input" />
+      </div>
+
+      <div class="user-controls">
+        <button class="my-courses-btn" onclick="toggleCourses()">Khóa học của tôi</button>
+
+        <!-- HTML -->
+        <div id="courseContainer" class="course-container">
+          <div class="header">
+            <h2>Khóa học của tôi</h2>
+            <a href="/src/pages/user/khoahoccuatoi/index.html" class="view-all">Xem tất cả</a>
+          </div>
+          <div class="course-list">
+            <article class="student-card">
+              <div class="course-item">
+                <img src="/public/image/6.png" alt="Node & ExpressJS">
+                <div class="course-info">
+                  <h3>Node & ExpressJS</h3>
+                  <p>Học cách đây 1 tuần</p>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 50%;"></div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="student-card">
+              <div class="course-item">
+                <img src="/public/image/2.png" alt="HTML CSS từ zero đến hero">
+                <div class="course-info">
+                  <h3>HTML CSS từ zero đến hero</h3>
+                  <p>Học cách đây 2 tuần</p>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 75%;"></div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="student-card">
+              <div class="course-item">
+                <img src="/public/image/12.png" alt="Lập trình JavaScript Cơ bản">
+                <div class="course-info">
+                  <h3>Lập trình JavaScript Cơ bản</h3>
+                  <p>Học cách đây 3 tuần</p>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 30%;"></div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b9f029b36dcb0fccafa43c47a621308e037af7ee"
+          alt="Notifications" class="notifications-icon" />
+        <!-- HTML -->
+
+        <div class="profile-container">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/32b5113305a5ad0fbfd9a4429511c612789dd759"
+            alt="Profile" class="profile-img" onclick="profile()" />
+          <div class="profile-card">
+            <div class="profile-header">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/32b5113305a5ad0fbfd9a4429511c612789dd759"
+                alt="Avatar" class="avatar" />
+              <div class="profile-info">
+                <h2>Nguyễn Linh Chú</h2>
+                <p>@11999QLING</p>
+              </div>
+            </div>
+            <ul class="menu">
+              <li><a href="/src/pages/user/Trang_ca_nhan_sua/index.html">Trang cá nhân</a></li>
+              <li><a href="/src/pages/user/baivietcuatoi/index.html">Bài viết của tôi</a></li>
+              <li><a href="#" onclick="logout()">Đăng xuất</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+  <script src="/src/components/HeaderScript.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,337 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.course-container {
+    width: 400px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.header .view-all {
+    color: #ff4500;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.course-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.course-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.course-thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+}
+
+.course-info h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.course-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.progress {
+    height: 100%;
+    background: #ff4500;
+}
+
+img {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 10%;
+}
+
+.course-container {
+    display: none;
+    /* Ẩn mặc định */
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 350px;
+}
+
+.course-container.active {
+    display: block;
+    /* Hiện khi có class active */
+}
+
+profile-card {
+    background: white;
+    width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-info h2 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.profile-info p {
+    font-size: 13px;
+    color: gray;
+    margin: 2px 0 0;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.menu li {
+    padding: 10px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    font-size: 14px;
+}
+
+.menu li:hover {
+    background: #f0f0f0;
+    border-radius: 5px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: #ddd;
+    margin: 5px 0;
+}
+
+.profile-card {
+    display: none;
+    position: absolute;
+    top: 60px;
+    /* Điều chỉnh vị trí theo nhu cầu */
+    right: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.profile-card.show {
+    display: block;
+}
+
+.main-footer {
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 40px 25px;
+    color: #fff;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.company-info {
+    max-width: 500px;
+}
+
+.footer-title {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.company-name {
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    color: #8c8c8c;
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.business-info {
+    color: #8c8c8c;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.business-info p {
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 100px;
+}
+
+.footer-section {
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer-section nav {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-section a {
+    color: #8c8c8c;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.footer-section a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    color: #8c8c8c;
+    font-size: 16px;
+}
+
+.social-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+/* Media Queries */
+@media (max-width: 1400px) {
+    .featured-posts {
+        padding: 72px 30px 11px 30px;
+    }
+
+    .main-footer {
+        padding: 40px 100px;
+    }
+}
+
+@media (max-width: 991px) {
+    .side-nav {
+        width: 10px;
+    }
+
+    .nav-item {
+        width: 80px;
+    }
+
+    .main-wrapper {
+        margin-left: 80px;
+    }
+
+    .search-section {
+        width: 400px;
+        margin-left: 200px;
+    }
+
+    .section-divider {
+        width: 100%;
+    }
+
+    .main-footer {
+        padding: 40px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Học Lập Trình</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.30.0/tabler-icons.min.css" />
+ 
+</head>
+
+<body>
+ <!-- Header -->
+ <div id="header-container"></div>
+ <!-- Sidebar -->
+ <div id="sidebar-container"></div>
+
+  <div class="layout">
+    <main class="main-content">
+      <article class="blog-post">
+        <h1 class="blog-post__title">
+          Cách chỉnh theme Oh-my-posh cho Powershell
+        </h1>
+
+        <div class="blog-post__meta">
+          <div class="author">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4479e13a36e2f0e06daef70a598f1a1a3a7e3770"
+              alt="Author" class="author__image" />
+            <div class="author__info">
+              <h2 class="author__name">DOGE MEME</h2>
+              <div class="author__details">
+                <span>2 năm trước</span>
+                <span>/ 2 phút đọc</span>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+
+        <div class="blog-post__content">
+          <section>
+            <h2>I. Giới thiệu:</h2>
+            <p>
+              Hello ae mọi người nhé, mọi người (đặc biệt là lập trình viên
+              Software) chắc hẳn đã nghe tới Powershell, nhưng bù lại cái màn hình
+              làm việc với powershell quá ngán, nhiều người muốn đồi nhưng không
+              được nên đúng như tiêu đề, hôm nay mình sẽ chỉ cho ae cách chỉnh nền
+              trên Powershell
+            </p>
+            <p class="note">
+              Lưu ý: Blog này chỉ cho Window chứ không cho Mac hay Ubuntu nhé!(vì
+              mình cũng chưa xài chưa biết nên không biết code có đúng không)
+            </p>
+          </section>
+
+          <section>
+            <h2>II. Cách làm:</h2>
+            <h3>2. Tải Oh-my-posh và áp dụng vào powershell</h3>
+            <p>
+              Rất đơn giản, các bạn chỉ cần copy những gì mình nói vào Powershell
+              là được rồi!
+            </p>
+            <p>Đầu tiên, các bạn tất nhiên phải cài Oh-my-posh rồi 🙂</p>
+            <h4>Code cho window:</h4>
+            <code class="code-block">
+              winget install JanDeDobbeleer.OhMyPosh -s winget
+            </code>
+          </section>
+
+          <section>
+            <h3>3. Mọi điều cần thiết sau khi tải Oh-my-posh:</h3>
+            <p>
+              Đầu tiên các bạn muốn nó tương thích hầu hết icon thì hãy tải 1
+              trong bộ Nerd Font này rồi dán vào file setting.json(ở góc bên trái
+              cuối phần setting của terminal), tìm ra đoạn có chữ "profile" và ở
+              dưới có "default" rồi các bạn chèn thêm cho mình:
+            </p>
+            <code class="code-block">"font": { "face": "FONT" }</code>
+            <p>
+              hoặc các bạn có thể dùng code này vào Powershell để tải Nerd
+              Font:(Nhớ hãy dùng Powershell dưới quyền admin nhé)
+            </p>
+            <code class="code-block">oh-my-posh font install</code>
+            <p>rồi làm như bên trên thôi.</p>
+          </section>
+
+          <section>
+            <h3>Thứ 2 là thêm theme cho Powershell(nếu muốn)</h3>
+            <p>
+              Và cuối cùng là phải cài bộ themes Oh-my-posh thì các bạn dùng code
+              sau:
+            </p>
+            <code class="code-block">Get-PoshThemes</code>
+          </section>
+
+          <section>
+            <h3>4. Kích hoạt theme Oh-my-posh</h3>
+            <p>
+              Sau khi chọn 1 theme ưng ý, các bạn copy tên nó rồi nhập các code
+              sau:
+            </p>
+            <code class="code-block">echo $profile</code>
+            <p>sau đó nhập</p>
+            <code class="code-block">notepad $profile</code>
+            <p>Sau khi ra 1 file Notepad rồi các bạn nhập code sau vào nó:</p>
+            <code class="code-block">
+              oh-my-posh init pwsh --config
+              "$env:POSH_THEMES_PATH\THEMENAME.omp.json" | Invoke-Expression
+            </code>
+            <p class="note">
+              Lưu ý: THEMENAME ở đây chỉ tên theme mà bạn muốn chọn
+            </p>
+            <p>
+              Cuối cùng các bạn save file notepad đó, vào tab terminal powershell
+              mới và thưởng thức thôi!!!🤩
+            </p>
+          </section>
+
+          <section>
+            <h2>III. Tạm kết</h2>
+            <p>
+              Mình đã chỉ cho các bạn cách chỉnh Terminal theme theo Oh-my-posh,
+              mình mong các bạn ủng hộ mình, và chúc các bạn làm code thêm đẹp mắt
+              nhé!
+            </p>
+            <p class="note">
+              Lưu ý: Đây là Blog đầu tiên của mình nên có sai sót gì mong các bạn
+              bỏ qua ạ
+            </p>
+          </section>
+        </div>
+      </article>
+    </main>
+  </div>
+
+  <div id="footer-container"></div>
+  <script src="./script.js"></script>
+</body>
+
+</html>

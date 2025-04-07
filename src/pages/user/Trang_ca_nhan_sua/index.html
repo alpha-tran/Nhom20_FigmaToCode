@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Học lập trình</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.30.0/tabler-icons.min.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+
+
+<body>
+  <div id="header-container"></div>
+    <!-- Sidebar -->
+    <div id="sidebar-container"></div>
+    
+  <div class="page-container">
+    <!-- Header component -->
+    
+  
+    <!-- Body component -->
+    <main class="main-content">
+      <section class="profile-sidebar">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/edec9eaf4bd8392221f8550c6243f5c1d1af73c1"
+          alt="User profile" class="profile-image" />
+        <h1 class="profile-name">Tạ Hoàng Phước 1194</h1>
+        <p class="profile-email">tahoangphuocbp@gmail.com</p>
+        <p class="profile-stats">
+          <span>0 người theo dõi . 0 đang theo dõi</span>
+          <br />
+          <span>Tham gia F8 từ 3 năm trước</span>
+        </p>
+      </section>
+      <section class="courses-section">
+        <h2 class="courses-title">Khóa học đã đăng ký</h2>
+        <div class="courses-grid">
+          <article class="course-card" onclick="openCourse('html-css-pro')">
+            <figure class="course-image-container">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9cbd981694154ac97ea9372c72645737bc66215f"
+                alt="HTML CSS Pro" class="course-image" />
+            </figure>
+            <div class="course-details">
+              <h3 class="course-title">HTML CSS Pro</h3>
+              <p class="course-price-original">2.500.000đ</p>
+              <p class="course-price-discounted">1.299.000đ</p>
+              <div class="course-stats">
+                <div class="stat-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d35124b4ebec4cd9aa84331a89241cfb045d15dc"
+                    alt="Views" class="stat-icon" />
+                  <span class="stat-value">133.350</span>
+                </div>
+                <div class="stat-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/889b77bb03744ee20d8ddcd7b163e6099ca36389"
+                    alt="Lessons" class="stat-icon" />
+                  <span class="stat-value">591</span>
+                </div>
+                <div class="stat-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/125af7bc004f1405be05b57254c011ce7ba3c598"
+                    alt="Duration" class="stat-icon" />
+                  <span class="stat-value">116h50p</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card" onclick="openCourse('javascript-beginners')">
+            <div class="course-banner purple-banner">
+              <h3 class="banner-title">JavaScript</h3>
+              <p class="banner-subtitle">cho người mới bắt đầu</p>
+            </div>
+            <div class="course-details">
+              <h3 class="course-title">HTML CSS Pro</h3>
+              <p class="course-price-original">2.790.000đ</p>
+              <p class="course-price-discounted">1.399.000đ</p>
+              <div class="course-stats">
+                <div class="stat-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8354ad467b0fd9c68fe40ef3f68e2674f265ede0"
+                    alt="Views" class="stat-icon" />
+                  <span class="stat-value">133.657</span>
+                </div>
+                <div class="stat-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/065c07941dc7ffbe70fd5791cc8fb3c4da166c0e"
+                    alt="Lessons" class="stat-icon" />
+                  <span class="stat-value">131</span>
+                </div>
+                <div class="stat-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4c2f907e03759ea731043c9057b2599155d4f918"
+                    alt="Duration" class="stat-icon" />
+                  <span class="stat-value">89h32p</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card" onclick="openCourse('sass-language')">
+            <figure class="course-image-container">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/064ac5f47d5a57125c3389f35d593050df55f583"
+                alt="Ngôn ngữ Sass" class="course-image" />
+            </figure>
+            <div class="course-details">
+              <h3 class="course-title">Ngôn ngữ Sass</h3>
+              <p class="course-price-original">2.500.000đ</p>
+              <p class="course-price-discounted">1.499.000đ</p>
+              <div class="course-stats">
+                <div class="stat-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/dfea6a19b20a79b56bae6d11324879a512f5db5d"
+                    alt="Views" class="stat-icon" />
+                  <span class="stat-value">136.986</span>
+                </div>
+                <div class="stat-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b64b4a12fb576b21741d9aa058c7f2276ec790b1"
+                    alt="Lessons" class="stat-icon" />
+                  <span class="stat-value">591</span>
+                </div>
+                <div class="stat-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3d185586cdc45a412afa0b3795f49f82ebd46a3a"
+                    alt="Duration" class="stat-icon" />
+                  <span class="stat-value">116h50p</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card" onclick="openCourse('responsive-grid')">
+            <div class="course-banner blue-banner">
+              <h3 class="banner-title">Responsive</h3>
+              <p class="banner-subtitle">@Web design</p>
+            </div>
+            <div class="course-details">
+              <h3 class="course-title">Responsive Với Grid System</h3>
+              <p class="course-price-free">Miễn phí</p>
+              <div class="course-stats">
+                <div class="stat-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d35124b4ebec4cd9aa84331a89241cfb045d15dc"
+                    alt="Views" class="stat-icon" />
+                  <span class="stat-value">46.699</span>
+                </div>
+                <div class="stat-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/889b77bb03744ee20d8ddcd7b163e6099ca36389"
+                    alt="Lessons" class="stat-icon" />
+                  <span class="stat-value">55</span>
+                </div>
+                <div class="stat-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/125af7bc004f1405be05b57254c011ce7ba3c598"
+                    alt="Duration" class="stat-icon" />
+                  <span class="stat-value">6h31p</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card" onclick="openCourse('it-basics')">
+            <div class="course-banner purple-banner">
+              <h3 class="banner-title">Kiến thức nền tảng</h3>
+              <p class="banner-subtitle">Kiến thức nhập môn {}</p>
+            </div>
+            <div class="course-details">
+              <h3 class="course-title">Kiến thức nhập môn IT</h3>
+              <p class="course-price-free">Miễn phí</p>
+              <div class="course-stats">
+                <div class="stat-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8354ad467b0fd9c68fe40ef3f68e2674f265ede0"
+                    alt="Views" class="stat-icon" />
+                  <span class="stat-value">139.007</span>
+                </div>
+                <div class="stat-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/065c07941dc7ffbe70fd5791cc8fb3c4da166c0e"
+                    alt="Lessons" class="stat-icon" />
+                  <span class="stat-value">9</span>
+                </div>
+                <div class="stat-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4c2f907e03759ea731043c9057b2599155d4f918"
+                    alt="Duration" class="stat-icon" />
+                  <span class="stat-value">3h65p</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card" onclick="openCourse('node-express')">
+            <figure class="course-image-container">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6686f3afaca7541b84cf2e4d214e305dac2d7275"
+                alt="Node & ExpressJS" class="course-image" />
+            </figure>
+            <div class="course-details">
+              <h3 class="course-title">Node &amp; ExpressJS</h3>
+              <p class="course-price-free">Miễn phí</p>
+              <div class="course-stats">
+                <div class="stat-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ad92718100e5d63de1c3f45900d7d9fb44be9320"
+                    alt="Views" class="stat-icon" />
+                  <span class="stat-value">46.885</span>
+                </div>
+                <div class="stat-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e1abdc27522a8fdd885f5a4525ebb89b52bbeaa3"
+                    alt="Lessons" class="stat-icon" />
+                  <span class="stat-value">36</span>
+                </div>
+                <div class="stat-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9c550957d6a300f187497514603719a53e165f49"
+                    alt="Duration" class="stat-icon" />
+                  <span class="stat-value">12h38p</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card" onclick="openCourse('javascript-basics')">
+            <div class="course-banner red-banner">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a7feb07f3a12b5da184226ec77fe5e3f51035785"
+                alt="JavaScript background" class="banner-background" />
+              <div class="banner-content">
+                <h3 class="banner-title">JavaScript</h3>
+                <p class="banner-subtitle">{.cơ bản}</p>
+              </div>
+            </div>
+            <div class="course-details">
+              <h3 class="course-title">JavaScript cơ bản</h3>
+              <p class="course-price-free">Miễn phí</p>
+              <div class="course-stats">
+                <div class="stat-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d35124b4ebec4cd9aa84331a89241cfb045d15dc"
+                    alt="Views" class="stat-icon" />
+                  <span class="stat-value">154.111</span>
+                </div>
+                <div class="stat-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/889b77bb03744ee20d8ddcd7b163e6099ca36389"
+                    alt="Lessons" class="stat-icon" />
+                  <span class="stat-value">112</span>
+                </div>
+                <div class="stat-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/125af7bc004f1405be05b57254c011ce7ba3c598"
+                    alt="Duration" class="stat-icon" />
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card" onclick="openCourse('cpp-programming')">
+            <div class="course-banner cyan-banner">
+              <h3 class="banner-letter">C</h3>
+              <p class="banner-text">từ cơ bản đến nâng cao</p>
+            </div>
+            <div class="course-details">
+              <h3 class="course-title">Lập trình C++</h3>
+              <p class="course-price-free">Miễn phí</p>
+              <div class="course-stats">
+                <div class="stat-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8354ad467b0fd9c68fe40ef3f68e2674f265ede0"
+                    alt="Views" class="stat-icon" />
+                  <span class="stat-value">33.595</span>
+                </div>
+                <div class="stat-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/065c07941dc7ffbe70fd5791cc8fb3c4da166c0e"
+                    alt="Lessons" class="stat-icon" />
+                  <span class="stat-value">55</span>
+                </div>
+                <div class="stat-item">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4c2f907e03759ea731043c9057b2599155d4f918"
+                    alt="Duration" class="stat-icon" />
+                  <span class="stat-value">10h18p</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="./script.js"></script>
+  <div id="footer-container"></div>
+</body>
+
+</html>
